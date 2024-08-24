@@ -16,7 +16,7 @@ tokenizer = AutoTokenizer.from_pretrained(model_name)
 model = AutoModelForCausalLM.from_pretrained(model_name, cache_dir=model_dir)
 
 # Prepare o texto de entrada
-text = "Exemplos de uso do comando de loop em python3"
+text = "What is the result of 8 multiplied by 5?"
 input_ids = tokenizer.encode(text, return_tensors='pt')
 
 # Gere o texto usando o gerador padrão
