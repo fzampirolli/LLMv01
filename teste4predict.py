@@ -1,6 +1,7 @@
 import torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 
+
 # Exemplo de novo texto
 new_text = """
 import java.util.Scanner;
