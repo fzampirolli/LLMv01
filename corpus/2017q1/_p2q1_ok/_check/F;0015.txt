@@ -1,0 +1,33 @@
+programa
+{
+	funcao inicio()
+	{
+		inteiro A[]={-62,8,98,75,26,77}, B[]={-102,0,102,0,26,79}, C[6]
+		inteiro l=6
+
+		imprime_vetor(A,l)
+		imprime_vetor(B,l)
+
+		maiores_elementos(A,B)
+
+		imprime_vetor(C,l)
+	}
+
+	funcao inteiro imprime_vetor(inteiro v[],inteiro l){
+		para(inteiro i=0;i<l;i++){
+			escreva(v[i])
+		}
+	}
+	funcao inteiro maiores_elementos(inteiro v1[], inteiro v2[]){
+		inteiro maior=v1[0], i=0
+		se(maior<v1[i]){
+			maior= v1[i]
+			maior=i
+		}
+		se(maior<v2[i]){
+			maior= v2[i]
+			maior=i
+		}
+
+		}
+}

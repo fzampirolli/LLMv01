@@ -1,0 +1,28 @@
+programa
+{
+	funcao inicio()
+	{
+		inteiro v[]
+		inteiro n, k
+
+		comparaVetor()
+
+	}
+	funcao logico comparaVetor(inteiro v[], inteiro n, inteiro k){
+
+		escreva ("Digite o tamanho do vetor: ")
+		leia(n)
+
+		para(inteiro i=0; i<n; i++)
+			leia(v[i])
+			se(v[n] >= 20){
+				retorne verdadeiro
+
+			}
+			senao{
+				retorne falso
+			}
+
+	}	
+
+}

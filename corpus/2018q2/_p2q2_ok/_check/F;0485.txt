@@ -1,0 +1,19 @@
+programa{
+	inclua biblioteca Util
+	funcao inicio(){
+		const inteiro fileira = 10, assento = 11
+		caracter matriz[fileira][assento]
+		caracter v='v'
+		para (inteiro linha = 0; linha < fileira; linha++)
+		{
+			para (inteiro coluna = 0; coluna < assento; coluna++)
+			{
+				matriz[linha][coluna] = v
+
+				escreva("[", matriz[linha][coluna], "]") 
+			}
+
+			escreva ("\n")
+		}	
+		}
+	}

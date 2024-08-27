@@ -1,0 +1,94 @@
+programa
+{
+
+	inclua biblioteca Util
+
+	funcao inicio()
+	{
+		caracter matcon[150][4]
+
+		GeraMat(matcon,150,4)
+		GeraMedia(matcon,150,4)
+
+	}
+
+	funcao GeraMat (caracter Mat[][], inteiro nlinhas, inteiro ncolunas) {
+		caracter conceitos[5] = {'A', 'B', 'C', 'D', 'F'}
+		inteiro i, j, valor
+		para (i = 0; i < nlinhas; i++){
+		para (j = 0; j < ncolunas; j++){
+		valor = Util.sorteia(0,4) 
+		Mat[i][j] = conceitos[valor]
+		}
+		}
+	}
+
+	funcao GeraMedia (caracter Mat[][], inteiro linhas, inteiro colunas){
+	inteiro l =0, c =0
+	real media = 0
+	enquanto (l < linhas ){
+		enquanto (c < colunas){
+		se (c == 0) {
+		se (Mat[l][c] == 'A') {
+			media = 4*0.3 + media
+		}
+		se (Mat[l][c] == 'B') {
+			media = 3*0.3 + media
+		}
+		se (Mat[l][c] == 'C') {
+			media = 2*0.3 + media
+		}
+			se (Mat[l][c] == 'D') {
+			media = 1*0.3 + media
+		}
+		}
+		se (c == 1) {
+		se (Mat[l][c] == 'A') {
+			media = 4*0.1 + media
+		}
+		se (Mat[l][c] == 'B') {
+			media = 3*0.1 + media
+		}
+		se (Mat[l][c] == 'C') {
+			media = 2*0.1 + media
+		}
+			se (Mat[l][c] == 'D') {
+			media = 1*0.1 + media
+		}
+		}
+		se (c == 2) {
+		se (Mat[l][c] == 'A') {
+			media = 4*0.15 + media
+		}
+		se (Mat[l][c] == 'B') {
+			media = 3*0.15 + media
+		}
+		se (Mat[l][c] == 'C') {
+			media = 2*0.15 + media
+		}
+			se (Mat[l][c] == 'D') {
+			media = 1*0.15 + media
+		}
+		}
+		se (c == 3) {
+		se (Mat[l][c] == 'A') {
+			media = 4*0.45 + media
+		}
+		se (Mat[l][c] == 'B') {
+			media = 3*0.45 + media
+		}
+		se (Mat[l][c] == 'C') {
+			media = 2*0.45 + media
+		}
+			se (Mat[l][c] == 'D') {
+			media = 1*0.45 + media
+		}
+		}
+		c++
+
+	}
+	escreva ("\n A media do aluno ", l, " foi de: ", media)
+	l++
+	}
+}
+}

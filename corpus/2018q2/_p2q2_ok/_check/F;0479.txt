@@ -1,0 +1,36 @@
+programa
+{
+	funcao inicio()
+	{
+		inteiro p1, p2, a, p
+		real media
+
+		escreva ("Escreva a nota da P1: ")
+		leia(p1)
+		escreva ("Escreva a nota da P2: ")
+		leia(p2)
+		escreva ("Escreva a nota da Atividade: ")
+		leia(a)
+		escreva ("Escreva a nota do Projeto: ")
+		leia(p)
+
+		media = p1*(0.35) + p2*(0.4) + a*(0.1) + p*(0.15)
+
+		se (media < 0.8) {
+			escreva ("Conceito Final  = F")	
+		}senao
+
+		se (media < 1.5) {
+			escreva ("Conceito Final  = D")	
+		}senao
+
+		se (media < 2.5) {
+			escreva ("Conceito Final  = C")	
+		}senao
+
+		se (media < 3.6) {
+			escreva ("Conceito Final  = B") 	
+		}
+		senao escreva ("Conceito Final = A")
+	}
+}

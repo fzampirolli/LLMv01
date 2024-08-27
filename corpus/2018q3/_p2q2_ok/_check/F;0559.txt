@@ -1,0 +1,32 @@
+programa
+{
+	funcao inicio()
+	{
+	const inteiro k=0, l=0
+     inteiro i, j
+
+escreva("Digite as casas:")
+leia(l)
+leia (k)
+real graos[l][k], somabrancos=0, somapretos=0
+
+para(i=0;i<l;i++){
+para(j=0; j<k; j++){
+se (i==j & i>(j-2) & i<(j-2)) {
+	somabrancos+=graos[l][k]
+}
+para(i=0;i<l;i++){
+para(j=0; j<k; j++){
+se  (j>i+1 & j<i+1) {
+	somapretos+=graos[l][k]
+}
+
+}
+
+}
+
+	}
+}
+escreva(somabrancos, somapretos)
+	}
+}

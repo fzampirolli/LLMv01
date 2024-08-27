@@ -1,0 +1,52 @@
+programa
+{
+	funcao cadeia vetor30 ( inteiro vetor[]){
+
+		inteiro vetor[124]
+		inteiro valor, i, menor
+		boolean true, false 
+
+ 	escreva ("Digite o tamanho do vetor: ")
+ 	leia (tam)
+
+		menor = vetor[0]
+		para (i=1; i<tam; i++){
+			escreva ( i "º: ")
+			leia (valor)
+			vetor[i] = valor 
+			v[0] = 30
+
+			se (menor > v[i]){
+				menor = v[i]
+			}
+
+			se (menor == 30){ 
+
+				 retorne  false 
+
+			senao { 
+				retorne true
+
+			}
+
+			}
+
+		}
+
+	}
+
+	funcao inicio()
+	{
+		inteiro vet[], tam, valor 
+
+		vetor30 (vet[], tam, valor)
+
+	 				se (vetor30 = false){
+	 					escreva ("Não exiate número menor do que 30")
+	 				}
+	 				senao {
+	 					escreva ("Existe valor menor do que 30")
+	 				}
+
+	}
+}

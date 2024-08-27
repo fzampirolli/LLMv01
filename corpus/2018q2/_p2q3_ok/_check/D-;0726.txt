@@ -1,0 +1,68 @@
+programa
+{
+	inclua biblioteca Util
+
+	funcao inicio()
+	{
+		const inteiro LIN=150, COL=4
+		inteiro M[LIN][COL]
+
+		M[LIN][COL] = GeraMat (M[LIN][COL], Mat[][])
+
+	}
+
+		funcao GeraMat(caracter Mat[][], inteiro nlinhas, inteiro ncolunas){
+			caracter conceitos[5] = {'A', 'B' , 'C' , 'D', 'F'}
+			inteiro i,j, valor
+			para (i=0; i<nlinhas; i++){
+				para (j=0; j<ncolunas; j++){
+					valor = Util.sorteia(0,4)
+					Mat[i][j]= conceitos[valor]
+				}
+				retorne Mat[i][j]
+			}
+		}
+		funcao real GeraMedia (real V[], inteiro Mat[][]){
+		 inteiro k=0 
+		 real media=0
+
+		 A=4.0
+		 B=3.0
+		 C=2.0
+		 D=1.0
+		 F=0.0
+
+		 media=((Mat[k][A*35)+(B*10)+(C*15)+(D*40))/100
+
+	}
+	funcao caracter ImprimeConceitoFinal (real GeraMedia){
+	real valor
+
+	valor=GeraMedia
+
+	se (valor<0.8){
+		escreva ("F")
+	}
+	senao{
+		se (valor<1.5){
+		escreva("D")
+	}
+
+	senao{
+		se(valor <2.5){
+			escreva("C")
+		}
+	senao{
+		se(valor<3.6){
+		escreva("B")
+	}
+	senao{
+		escreva("A")
+
+	}
+		}
+	}
+
+	}
+	retorne valor
+	}

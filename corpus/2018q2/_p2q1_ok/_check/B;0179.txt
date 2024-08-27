@@ -1,0 +1,67 @@
+programa
+{
+	inclua biblioteca Util
+	funcao inicio()
+	{
+		const inteiro MAX = 50
+		inteiro V[MAX], i 
+		escreva("preencher vetor: \n")
+		para (i=0; i< MAX; i++){
+			V[i] = Util.sorteia(-20, 50)
+
+		}
+
+		moduloA(V, MAX) 
+
+		escreva("\n---------------------------------------------------------------------")
+
+		inteiro k
+
+		escreva("\nEntre com um número inteiro: ")
+		leia(k)
+
+		moduloB(V, k, MAX)
+
+	}
+
+	funcao moduloA(inteiro vet[], inteiro tamanho){
+
+          inteiro i, soma = 0
+		para(i = 0; i < tamanho; i++){
+			escreva("\n["+i+"]="+vet[i])
+
+		}
+
+		escreva("\n O elemento de indice 6 do vetor é: " + vet[6])
+
+		para(i = 0; i < tamanho; i++){
+			se(vet[i] > vet[6]){
+				soma++  
+			}			
+		}
+
+		escreva("\n A qauntidade de números maiores que " +vet[6]+ " é: " +soma) 
+
+			}
+
+      funcao moduloB(inteiro vet[], inteiro n, inteiro tamanho){
+
+      	inteiro i
+      	para(i = 0; i < tamanho; i++){
+
+      		se( vet[i] == n){
+      			escreva("\n" + n + " ocorreu na posição: " +i+"\n")
+
+      		}
+
+      		senao{
+      			se( vet[i] != n){ 
+      				escreva("\n" +n+ " não foi encontrado no vetor.")   
+      			}
+      		}
+
+      	}
+
+      }
+
+	}

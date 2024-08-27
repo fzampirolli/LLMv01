@@ -1,0 +1,37 @@
+programa
+{
+	inclua biblioteca Util
+	funcao inicio()
+	{
+
+		const inteiro TAMANHO = 5
+
+		inteiro matriz[TAMANHO][TAMANHO] 
+
+		para (inteiro linha = 0; linha < TAMANHO; linha++)
+		{
+			para (inteiro coluna = 0; coluna < TAMANHO; coluna++)
+			{
+				matriz[linha][coluna] = u.sorteia(1, 9) 
+
+				escreva("[", matriz[linha][coluna], "]") 
+			}
+
+			escreva ("\n")
+
+	escreva("                              ", GeraMat(,aluno,conceitos))
+
+	}
+
+	funcao GeraMat(caracter Mat[][], inteiro nlinhas, inteiro ncolunas){
+		caracter conceitos [5]={'A','B','C','D','F'}
+		inteiro i, j, valor
+		para(i=0;i<nlinhas;i++){
+			para(j=0;i<nlinhas;i++){
+				valor=Util.sorteia(0,4)
+				Mat[i][j]=conceitos[valor]
+			}
+		}
+	}
+
+}

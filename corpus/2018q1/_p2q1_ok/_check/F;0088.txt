@@ -1,0 +1,36 @@
+programa
+{
+	funcao valor(inteiro vetor[n], inteiro i)
+	{
+
+		logico A, B
+		se (i > 30)
+		{
+
+			A = verdadeiro
+			retorna A
+		}
+		senao 
+		{ 
+			B = falso
+			retorna B
+		}
+	}
+	funcao inicio()
+	{
+		inteiro n, i
+		inteiro vetor[]
+		n = 125
+	 	para (i = 0; i<= n-1; i++)
+	 	{
+	 		escreva ("Digite um valor:")
+	 	}
+		se (valor(inteiro vetor[n], inteiro i) = A)
+		{
+			escreva ("Existe número menor a 30 contido nesse vetor")
+		}
+		senao 
+		{
+			escreva ("Não existe número menor a 30 contido nesse vetor")
+		}
+	}

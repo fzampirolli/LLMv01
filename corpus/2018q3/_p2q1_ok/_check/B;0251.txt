@@ -1,0 +1,34 @@
+programa
+{
+	funcao inicio()
+	{
+		inteiro n
+
+		escreva("Digite um número ímpar positivo:")
+		leia(n)
+
+		inteiro V[10], tamanho, i
+		inteiro V_Semi[], armazena
+
+		para(i=0;i<n;i++){
+			escreva("\nDigite os valores a serem armazenados na posição ", i,":\n")
+			leia(V[i])
+		}	
+
+			se(V[1] > V[i-2]){
+				armazena = V[1]
+				V[1] = V[i-2]
+				V[i-2]=armazena
+			}
+			se(V[3] > V[i-4]){
+				armazena = V[3]
+				V[3] = V[i-4]
+				V[i-4]=armazena
+			}
+
+			escreva("\nO semiparticionado de V é:\n")
+			para(i=0;i<n;i++){
+				escreva(V[i]," ")				
+			}
+		}
+	}

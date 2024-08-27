@@ -1,0 +1,21 @@
+programa
+{
+	funcao inicio() 
+	{
+
+	}
+	funcao GeraMatriz(inteiro Mat[][], inteiro L, inteiro C){
+		para(inteiro i=0;i<L;i++){
+			para(inteiro j=0;j<C;j++){
+				Mat[i][j]=Util.sorteia(0,10)
+
+			}
+		}
+	}
+	funcao imprimeMatriz(){
+		inteiro A
+
+		GeraMatriz(inteiro Mat[][],inteiro L, inteiro C)=A[i][j]
+	}
+
+}

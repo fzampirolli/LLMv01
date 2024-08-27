@@ -1,0 +1,34 @@
+programa
+{
+	funcao inicio()
+	{
+		inteiro MatrizA[9][10], MatrizB[9][10]	
+			inteiro i, j
+
+			escreva("O que deseja: \nA-Vender Ingressos \nB-Exibir ingressos vendido \nC-Encerrar Progrma")
+
+			}
+
+	funcao GeraMatriz (inteiro linha, inteiro coluno){
+		inteiro Matriz[10][11]
+		 para(inteiro i=0; i<9; i++){
+			 	para(inteiro j=0; j<10; j++){
+			 		escreva(Matriz[i][j])
+
+			 	}
+			 }
+		}
+
+	funcao VenderIngresso (inteiro fileira, inteiro cadeira) {
+			inteiro i,j
+
+			escreva("\nEscolha o setor ")
+
+			escreva("\nEscolha sua fileira ")
+			leia(i)
+			escreva("\nEscolha sua cadeira ")
+			leia(j)
+
+	}
+
+}

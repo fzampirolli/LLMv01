@@ -1,0 +1,28 @@
+programa
+{
+	inclua biblioteca Util
+	funcao inicio()
+	{
+		const inteiro MAX = 50
+		inteiro V[MAX] , i, k=0
+		escreva ("Preencher vetor: \n")
+		para(i = 0; i < MAX; i++){
+
+		V[i] = Util.sorteia (-20, 50)
+		}
+
+		para (i=0; i<50; i++){
+
+		escreva (V[49])     
+
+		}
+		escreva("\nPosição 8:\n")
+		escreva (V[7])	   
+
+		escreva("\nInsira um número k:\n")
+		leia(k)
+		para(i=0; i<50; i++){
+
+		}
+	}
+}

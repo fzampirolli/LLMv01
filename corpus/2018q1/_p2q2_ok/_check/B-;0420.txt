@@ -1,0 +1,56 @@
+programa
+{
+	funcao inicio()
+	{
+		inteiro i = 35, j =35
+		cadeia a
+
+		caracter nome[]
+		caracter A[]
+
+		lerVetores(A, nome)
+
+		escreva("Digite o assento do passsageiro: ")
+		leia(a)
+
+		pesquisarNome(A, nome, a)
+
+	}
+
+	funcao lerVetores (caracter vetorAssento[], caracter vetorNome[]){
+		inteiro i =0
+
+		para(i=0;i<35;i++){
+
+			escreva("Digite o nome do passageiro ", i, " : ")
+			leia(vetorAssento[i])
+
+			para(inteiro j=0;j<35;j++){
+
+			escreva("Digite o número do assento ", j, " : ")
+			leia(vetorNome[j])
+
+				}			
+			}
+		}
+
+	funcao pesquisarNome(caracter vetorAssento[], caracter vetorNome[], cadeia assento){
+
+		cadeia nome
+
+		para (inteiro i = 0;i<35; i++){
+
+		se (vetorAssento[i] == assento){
+
+			nome = VetorNome[i]
+
+				retorne nome			
+		}
+		senao{
+
+			retorne ""
+			escreva("Assento não existe")
+		}
+	}
+	}
+}

@@ -1,0 +1,45 @@
+programa
+{
+	funcao inicio()
+	{
+		const inteiro L=0, C=0
+		escreva("digite o numero de linhas L")
+		leia(L)
+		se(L%2!=0){
+			escreva("Digite L par")
+			leia(L)
+		}
+		escreva("digite o numero de colunas C")
+		leia(C)
+		se(C%2!=0){
+			escreva("Digite L par")
+			leia(C)
+		}
+
+		inteiro A[L][C]
+		ler_matriz(A,L,C)
+
+		IMPRIMI_MATRIZ(A,L,C)
+
+	}
+	funcao inteiro ler_matriz(inteiro m[][],inteiro L,inteiro C){
+		para(inteiro l=0;l<L;l++){
+			para(inteiro c=0;c<C;c++){
+				m[l][c]
+			}
+		}
+	}
+	funcao inteiro matrizB(inteiro m[][], inteiro L, inteiro C){
+
+		inteiro B[][]
+		ler_matriz(B,L,C)
+		IMPRIMI_MATRIZ(B,L,C)
+	}
+	funcao inteiro IMPRIMI_MATRIZ(inteiro m[][], inteiro L, inteiro C){
+		para(inteiro l=0;l<L;l++){
+			para(inteiro c=0;c<C;c++){
+				escreva(m[l][c])
+			}
+		}
+	}
+}

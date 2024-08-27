@@ -1,0 +1,35 @@
+programa
+{
+	funcao inicio()
+	{
+		inteiro VetorA[6], VetorB[6], i=0,VetorC[6]
+		escreva ("Digite o código do produto (300 a 305) ")
+		para (i=0;i>=0; i++){
+		leia (VetorA[i])
+		escreva ("Digite a quantidade de produto ")
+		leia (VetorB[i])
+
+			se (VetorA[i]==300){
+			VetorC[i]=(VetorB[i]*1.30)	
+			}
+			se (VetorA[i]==301){
+			VetorC[i]=(VetorB[i]*1.40)
+			}
+			se (VetorA[i]==302){
+			VetorC[i]=(VetorB[i]*1.50)
+			}
+			se (VetorA[i]==303){
+			VetorC[i]=(VetorB[i]*1.40)
+			}
+			se (VetorA[i]==304){
+			VetorC[i]=(VetorB[i]*2.2)
+			}
+			se (VetorA[i]==305){
+			VetorC[i]=(VetorB[i]*1)
+			}
+
+		}
+
+	escreva (VetorC[i])
+}
+}

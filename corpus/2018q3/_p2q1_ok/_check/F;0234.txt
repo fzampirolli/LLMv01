@@ -1,0 +1,29 @@
+programa
+{
+	funcao inicio()
+	{
+
+          inteiro vetor[9], vetorinverso[9], i
+
+          para(i=0; i<9; i++){
+          	escreva("valores do vetor")
+          	leia(vetor[i])
+          }
+
+          para(i=0; i<9; i++){
+          	vetorinverso[i]=vetor[8-i]
+
+          }
+          para (i=0; i<9; i++){
+          se (vetor[8]>vetor[0]){
+          	escreva(vetorinverso[i])
+          }
+
+          senao se (vetor[8]<vetor[0]){
+          	escreva(vetor[i])
+          }
+          }
+
+          }
+
+}

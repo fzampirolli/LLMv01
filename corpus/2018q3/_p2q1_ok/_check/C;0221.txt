@@ -1,0 +1,25 @@
+programa
+{	
+	funcao inicio()
+	{ inteiro n, V[], i, aux
+
+		escreva("Insira um número inteiro positivo ímpar, para o tamanho do vetor")
+		leia(n)
+		para (i=0;i<n;i++){
+		escreva("Insira ", n , "números inteiros para o vetor V")
+		leia(V[i])
+		}
+
+		para (i=0;i<n;i++){
+		se (V[i]> V[n-i]){
+		aux= V[i]
+		V[i] = V[n-i]
+		V[n-i] = aux
+		}	
+		}
+		para (i=0;i<n;i++){
+		escreva(V[i])
+		}
+	}
+
+}

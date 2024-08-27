@@ -1,0 +1,12 @@
+programa
+{
+	funcao inicio()
+	{
+		inteiro tam = 0
+		inteiro vetor[tam]
+
+		escreva("Digite o tamanho do vetor: ")
+		leia(tam)
+
+	}
+}

@@ -1,0 +1,53 @@
+programa
+{
+	funcao inicio()
+	{ cadeia item[6] 
+	inteiro cod[6]
+	real preco[6]
+
+	item[0]='Pa'
+	item[1]='Ba'
+	item[2]='Ca'
+	item[3]='Ch'
+	item[4]='Su'
+	item[5]='Re'
+
+	cod[0]=100
+	cod[1]=101
+	cod[2]=102
+	cod[3]=103
+	cod[4]=104
+	cod[5]=105
+	preco[0]=1.10
+	preco[1]=1.30
+	preco[2]=1.50
+	preco[3]=1.30
+	preco[4]=2.00
+	preco[5]=1.00
+	Cardapio ( item, cod, preco)
+
+	}
+	funcao Cardapio ( cadeia &item[], inteiro cod[], real preco[]){
+		inteiro n, quant, c, x
+		real precofinal, final=0		
+	 inteiro l=0
+		escreva("O vetor é ")
+		para(l=0; l<n; l++){
+		escreva(cod[l],"\t\t")
+		escreva(item[l], "\t\t")
+		escreva(preco[l], "\t\t")
+		escreva("\n")
+		}
+		enquanto(c!=0){
+	escreva("\nQual a quantidade que deseja? ") 
+	leia(quant)
+	escreva("\nQual o codigo do seu pedido? ")
+	leia(c)
+	se(c==0){
+	x=c-100
+	precofinal=quant*preco[c-100]
+	final=precofinal+final
+	}
+	}
+	}
+}

@@ -1,0 +1,31 @@
+programa
+{
+	inclua biblioteca Util
+	funcao inicio()
+	{
+		inteiro L = 27, C =27
+		GeraMatriz(inteiro A[][], L, C)
+		ImprimeMatrizA(inteiro A[][])
+		B=matrizTranspostaA(inteiro B[][])
+	}
+	funcao GeraMatriz(inteiro A[][], inteiro L , inteiro C ){
+		para(inteiro i = 0; i < L; i++){
+			para(inteiro j = 0; j < C; j++){
+				A[i][j] = Util.sorteia(0, 10)
+			}
+		}
+	}
+	funcao ImprimeMatrizA(inteiro A[][]){
+		escreva(A[i][j])
+	}
+	funcao B=matrizTranspostaA (inteiro B[][]){
+
+		inteiro B[27][27]
+
+		para(i = 0; i < 27; i++){
+			para(j = 0; j < 27; j++){
+				A[i][j] = B[j][i]
+			}
+		}
+	}
+}

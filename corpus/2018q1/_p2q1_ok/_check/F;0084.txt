@@ -1,0 +1,27 @@
+programa
+{
+	funcao inicio()
+	{
+		inteiro i,k,s
+		inteiro A[] 
+
+		escreva("Digite o tamanho do vetor: ")
+		leia(i)
+
+	     escreva("Digite os elementos do vetor: ")
+          A[i]= k
+
+          para ( k = 0; k < i; k++){
+
+                   se(A[k] > 20){
+
+          	escreva("Existe um valor maior a 20 nesse vetor")
+
+          }
+          senao{
+          	escreva("Não existe numero maior a 20 nesse vetor")
+          }
+
+         	}
+}
+}

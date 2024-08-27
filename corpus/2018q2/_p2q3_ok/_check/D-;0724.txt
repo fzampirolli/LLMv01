@@ -1,0 +1,46 @@
+programa
+{
+	funcao inicio()
+	{
+		cadeia M[150][4]
+		inteiro i, j, valor
+		para (i=0; i<linhas; i++){
+			para (j=0; j<colunas; j++){
+				valor = Util.sorteia (0,4)
+				Mat [i] [j] = conceitos [valor]
+			}
+	}
+	escreva (ImprimeConceitoFinal(nota))
+		}
+		funcao cadeia ImprimeConceitoFinal (real n){
+			cadeia conceito="A"
+			se (n<0.8){
+			conceito="F"
+		}
+			senao se (n<1.5 e n>0.8){
+				conceito="D"
+		}
+				senao se (n<2.5 e n>1.5){
+					conceito="C"
+		}
+					senao se (n<3.6 e n>2.5){
+						conceito="B"
+		}
+
+	funcao Geramedia (real vetor[])
+
+	real A=4.0, B=3.0, C=2.0, D=1.0, F=0.0
+	real media = vetor[0]*0.37+vetor[1]+0.38*vetor[2]+0.15*vetor[3]*0.1
+		retorne media
+		}
+		funcao GeraMat (caracter Mat[] [] , inteiro linhas , inteiro colunas){
+			inteiro i, j
+			para (i=0; i<linhas; i++){
+			para (j=0; j<colunas; j++){
+				escreva ("\n elementos da matriz" +i, j)
+				leia (M[i][j])
+			}
+}
+	}
+}
+OBS: NAO DEU PARA TERMINAR

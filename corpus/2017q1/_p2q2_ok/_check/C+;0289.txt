@@ -1,0 +1,62 @@
+programa
+{
+	funcao inicio()
+	{ inteiro ind, cem  = 99, qtd
+	  real soma =0
+	  inteiro cod [6]
+	  cadeia item[6]
+	  real preco[6]
+
+	escreva ("CODIGO") 
+	para (ind = 0; ind < 6; ind++){
+	cem = cem + 1
+	cod[ind] = cem
+	escreva ("\n",cod[ind])
+	}
+
+	escreva ("\nITEM")
+	para (ind = 0; ind <1; ind ++){
+	item[ind] = "Pao de Queijo"
+	escreva("\n", item[ind])
+	item[ind] = "Bauru"
+	escreva("\n", item[ind])
+	item[ind] = "Cachorro Quente"
+	escreva("\n", item[ind])
+	item[ind] = "Cheese Burguer"
+	escreva("\n", item[ind])
+	item[ind] = "Suco"
+	escreva("\n", item[ind])
+	item[ind] = "Refrigerante"
+	escreva("\n", item[ind])
+	}
+
+	escreva ("\nPRECO UNITARIO")
+	para (ind = 0;ind <1;ind++){
+	preco [ind] = 1.10
+	escreva ("\n", preco[ind])
+	preco [ind] = 1.30
+	escreva ("\n", preco[ind])
+	preco [ind] = 1.50
+	escreva ("\n", preco[ind])
+	preco [ind] = 1.30
+	escreva ("\n", preco[ind])
+	preco [ind] = 2.00
+	escreva ("\n", preco[ind])
+	preco [ind] = 1.00
+	escreva ("\n", preco[ind])
+
+	}
+
+	enquanto (cod[ind] != 0) {
+	escreva ("\nDigite o codigo do produto(100 a 105): ")
+	leia (cod[ind])
+
+	se (cod[ind] == 0) { escreva ("FIM")}
+	senao {
+	escreva ("\nDigite a quantidade do produto: ")
+	leia (qtd)
+
+	} 
+
+	}
+}

@@ -1,0 +1,27 @@
+programa
+{
+	funcao inicio() 
+	{
+		inteiro n
+
+		escreva ("Digite o valor de n: ")
+		leia (n)
+
+		inteiro i, V[n],c=-1,mediano
+
+		para(i=0;i<n;i++){
+			escreva("Digite os valores do vetor: ")
+			leia(V[i])
+			c=c+2
+		}
+
+		mediano=n/2
+
+		enquanto(c<mediano){
+
+				V[c]=V[i-2]
+				V[i-2]=V[i+c]
+		}
+
+	}
+}

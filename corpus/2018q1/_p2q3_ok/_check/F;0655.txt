@@ -1,0 +1,38 @@
+programa
+{
+	funcao cadeia inicio (inteiro Vetor [] inteiro n ){
+	 inteiro x, i ,j, n 
+
+	escreva ("Digite o tamanho do Vetor:")
+	leia (n)
+	para (x=0; x>n;x++){
+	escreva ("Digite os valores do Vetor")
+	leia (x)
+	leia (Vetor[x])}
+	}
+
+		funcao inteiro vetor[tam] (matriz [][] , Vetor[]) {
+		se (Vetor[x]=>0) {
+			diagonal_matriz= Vetor[x]
+		}
+		se (diagonal_matriz != 0){
+		escreva ("Digite os valores das linhas da Matriz:")
+		 leia (i)
+		 escreva ("Digite os velores das colunas da Matriz:")
+		 leia (j)              
+		 leia (matriz[i][j])}
+		}
+		funcao inteiro imprimir_Matriz (inteiro matriz[i][j]){
+		se (matriz[i] [j]!=vazio) {
+			leia(matriz[i] [j])
+		}
+		}
+		funcao inteiro calcular_Media(inteiro matriz [i] [j] {
+			enquanto (matriz[i] [j]!=vazio){
+				SomaMatriz= (i+j)/n
+				leia(SomaMatriz)
+		                                    }
+		       escreva ("A soma aritmética da Matriz é:", SomaMatriz)                             
+		                                                     }
+
+}

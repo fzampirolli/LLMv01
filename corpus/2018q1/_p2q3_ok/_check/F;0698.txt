@@ -1,0 +1,29 @@
+programa
+{
+	funcao inicio()
+	{
+		inteiro  n=0, vetor[10], matriz[10][10]
+
+		escreva ("Digite o tamanho do vetor: ")
+		leia (n)
+
+		      para (inteiro tam=n; n > 1; n=n-1){
+		        escreva ("Digite o tamanho do vetor: ")
+		         leia (vetor[n])
+
+            para (inteiro i=0; i < n-1; i++){
+              para (inteiro j=0; j < n-1; j++){
+
+                  se (i!=j){
+              	   escreva ("\nDigite os valores da posição [",i,"] e [",j,"] da matriz: ")
+                  }
+                  senao{
+                  	matriz[i][j] = vetor[n]
+                  }
+
+              }
+            }
+
+    }
+	}
+}

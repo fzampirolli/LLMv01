@@ -1,0 +1,47 @@
+programa
+{
+	funcao inicio()
+	{
+		const inteiro L=21, C=21
+		matrizA=imprimeMatrizA
+		matrizB=matrizTranspostaA
+		media=mediaElementos
+
+funcao GeraMAtriz(inteiro Mat[][], inteiro L, inteiro C){
+	para (inteiro i=0, i<L, i++){
+		para (inteiro j=0, j<C, j++){
+			Mat[i][j]=Util.sorteia(0,10)
+		}
+	}
+}
+
+funcao imprimeMatrizA (inteiro GeraMatriz){
+	para(i=0, i<L, i++){
+		para(j=0, j<C, j++){
+			escreva (Mat[i][j]";")
+		}
+		escreva("\n")
+	}
+	retorna Mat[i][j]
+}
+
+funcao matrizTranspostaA (inteiro GeraMatriz){
+	para(i=0, i<L, i++){
+		para(j=0, j<C, j++){
+			escreva (Mat[j][i]";")
+		}
+		escreva("\n")
+	}
+	retorna Mat[i][j]
+}
+
+funcao mediaElementos (real media){
+	para(i=0, i<L, i++){
+		para(j=0, j<C, j++){
+			media=i*j
+		}
+			escreva ("Média dos elementos=", media)
+	}
+	retorna media
+}
+}

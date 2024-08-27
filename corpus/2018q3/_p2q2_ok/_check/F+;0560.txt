@@ -1,0 +1,33 @@
+
+programa
+{
+	funcao inicio()
+	{
+		inteiro n, A[][], pretos, i=0
+
+		escreva("\nEscreva um valor entre 2 e 22: ")
+		leia(n)
+
+		para (inteiro i = 0; i < n; i++)
+		{
+			para (inteiro j = 0; coluna < n; j++)
+			{
+			leia(A[i][j])
+			i = i + 1
+			j = j + 1
+		para (i <= n; j % 2 != 0){
+        			 pretos = A[i][j] + A [i][j] 
+        	para (i <= n; j % 2 == 0){
+        			 brancos = A[i][j] + A [i][j] 		     
+			}}
+	     se (pretos == brancos){
+	     	resultado = 2
+	     se (pretos <= brancos){
+	     	resultado = 1
+	     se (pretos >= brancos){
+	     	resultado = 0
+	     }
+	     escreva(pretos, brancos, resultado)
+		}
+	}
+}

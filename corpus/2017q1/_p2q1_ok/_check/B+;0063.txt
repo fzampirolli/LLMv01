@@ -1,0 +1,55 @@
+ programa
+{
+	funcao inicio()
+	{
+		inteiro A[] = { 42, 30, -215, 20, 25, 7 }
+		inteiro B[] = { 12, 103, 49, 20, 55, 7 }
+		inteiro C[6]
+
+		MaioresElementos (A, B, C)
+
+	}
+
+     funcao MaioresElementos (inteiro A[], inteiro B[], inteiro C[])
+     {
+
+     para (inteiro posicao = 0; posicao < 6; posicao++)
+		{
+			se (A[posicao] <= B[posicao]) 
+		{
+			C[posicao] = B[posicao]
+
+		}
+               senao 
+               {
+               	C[posicao] = A[posicao]
+               	 escreva (C[posicao], " ")
+               	 }
+
+		}
+
+            ImprimeVetor(A, B, C)
+
+	}
+
+	funcao ImprimeVetor (inteiro A[], inteiro B[], inteiro C[])
+     {
+	   escreva ("ImprimeVetor(A)\n")
+		para(inteiro posicao = 0; posicao < 6; posicao++)
+		{
+			escreva (A[posicao], " ")
+		}
+        escreva ("\nImprimeVetor(B)\n")
+		para(inteiro posicao = 0; posicao < 6; posicao++)
+		{
+			escreva (B[posicao], " ")
+		}
+        escreva ("\nImprimeVetor(C)\n")
+		para(inteiro posicao = 0; posicao < 6; posicao++)
+		{
+			escreva (C[posicao], " ")
+		}
+
+	}
+
+}

@@ -1,0 +1,13 @@
+programa
+{
+	funcao inicio()
+	{
+		escreva("Qual o tamanho da matriz? (Inteiros entre 2 e 22)")
+		leia (n)
+		inteiro Matriz[n][n]
+		escreva("Entre com os elementos da matriz: ")
+		para (i=0, i<n, i++){
+			para(j=0, j<n, j++){
+				leia(Matriz[i][j])
+			}
+		}

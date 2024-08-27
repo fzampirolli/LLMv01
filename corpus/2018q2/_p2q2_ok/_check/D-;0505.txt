@@ -1,0 +1,54 @@
+programa
+{
+	funcao inicio()
+	{
+		const inteiro LIN=40, COL=60 
+		inteiro setor, fila
+		inteiro cadeira
+		caracter selecao
+		inteiro v=0, p=1, ingresso=0
+
+		caracter setor1[LIN][COL]
+		caracter setor2[LIN][COL]
+
+		para (inteiro l=0; l<LIN; l++){
+			para (inteiro c=0; c<COL; c++){
+
+			setor1[l][c]= 'v'
+			setor2[l][c]= 'v'
+
+		escreva("\nSelecione A para vender ingresso, B para exibir o total de ingressos vendidos e C para encerrar o programa ")
+leia(selecao)
+		se(selecao=='A'){
+			escreva ("Qual o setor que deseja?")
+		leia(setor)
+
+		escreva("qual o número da fila que deseja?")
+		leia(fila)
+
+		escreva("qual o numero da cadeira que deseja?")
+		leia (cadeira)
+
+		se (cadeira==v){
+
+		cadeira=p
+		escreva ("seu lugar foi reservado")
+		}
+		senao{
+			escreva ("cadeira já vendida")
+		}
+		}
+senao{ 
+	se(selecao=='B'){
+
+		escreva("o total de ingressos vendidos é de: ", ingresso)
+
+	}
+
+		}
+
+			}
+		}
+
+		}
+	}

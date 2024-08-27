@@ -1,0 +1,45 @@
+programa
+{
+	funcao inicio()
+	{
+		const inteiro tam = 1000000
+		inteiro vetor[tam]
+		inteiro x = 0, y =0, matrizes = 0, media = 0
+
+		escreva("Entre com o tamanho do vetor: \n")
+		leia(x)
+		escreva("Agora entre com os valores do vetor: \n")
+		para (y=0; y<x; y++)
+		leia(vetor[x])
+
+		matrizes = CriarMatriz (vetor[x])
+
+		ImprimirMatriz(matrizRec)
+
+		media = MediaMatriz(matrizRec)
+
+		Imprimir ("A média é: " ,media)
+
+	}
+	     funcao inteiro CriarMatriz (inteiro &A[])
+	     {
+	     const inteiro a = 1000, b = 1000, h= 1000
+	     inteiro M[a][b], v[h], c
+	     leia(c)
+          leia(v[c])
+
+	     }
+
+	     funcao inteiro ImprimirMatriz ( inteiro B[][])
+	     {
+
+	     }
+
+	     funcao inteiro MediaMatriz ( inteiro C[][])
+	     {
+
+	     }
+
+          funcao inteiro Imprimir 
+
+}

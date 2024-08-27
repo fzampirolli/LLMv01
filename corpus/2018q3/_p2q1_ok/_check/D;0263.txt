@@ -1,0 +1,23 @@
+programa
+{
+	funcao inicio()
+	{
+
+		const inteiro n=0
+		inteiro i
+
+		escreva("Informe o tamanho do vetor: ")
+		leia(n)
+		inteiro V[n] 
+		para (i=0;i<n;i++){  
+			escreva("\n Entre com os elementos inteiros do vetor")
+			leia(V[i])
+		}
+
+		para (i=0;i<n;i++){
+			escreva("\n O vetor é: ",V[i])
+		}
+
+		}
+
+}

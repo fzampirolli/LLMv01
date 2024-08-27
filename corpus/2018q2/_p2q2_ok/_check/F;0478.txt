@@ -1,0 +1,23 @@
+programa
+{
+	funcao inicio()
+	{
+		inteiro nlinhas, ncolunas, i, j
+		inteiro A[40][60]
+		nlinhas=0 
+		ncolunas=0
+		enquanto (nlinhas < 40)
+		{
+			ncolunas = 0
+			enquanto (ncolunas < 60)
+			{
+				nlinhas = 0 
+			}
+			}
+			escreva("Digite sua fileira:")
+			leia (i)
+			escreva("Digite sua cadeira:")
+			leia (j)
+
+	}
+}

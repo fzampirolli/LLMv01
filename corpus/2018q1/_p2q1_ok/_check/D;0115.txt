@@ -1,0 +1,39 @@
+programa
+{
+	funcao inicio()
+	{
+		const inteiro tam = 145
+		inteiro vetor[tam]
+		inteiro x = 0, y =0
+
+		escreva("Entre com os valores do vetor: \n")
+		para (y=0; y<145; y++)
+		leia(vetor[tam])
+
+          comparaVetor (vetor[tam], tam, 10)
+
+          se (verdadeiro) {
+          	escreva("Existe número diferente de 10 neste vetor \n")
+          }
+          	senao { 
+          		escreva("Não existe número diferente de 10 neste vetor \n") 
+
+          	}
+
+	}
+	funcao logico comparaVetor(inteiro &v[], inteiro n, inteiro k)
+	{
+     const inteiro a = 145
+     inteiro b, c
+     inteiro vet[k]
+     leia(v[k])
+     se (v[k] != 10){
+            retorne verdadeiro 
+     }
+     senao {
+     	retorne falso
+     }
+
+     }
+
+}

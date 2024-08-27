@@ -1,0 +1,22 @@
+programa
+{
+	funcao inicio()
+	{
+
+		inteiro n
+
+		inteiro v []
+
+		escreva ("\nDigite um número Positivo positivo e ímpar:")
+		leia(n)
+
+		se (n>0 e 0==n%2 e n/10!=0) {
+			escreva ("")
+		}
+
+		senao {
+			escreva("Número Inválido: Você digitou um número menor que 0 ou par.")
+		}
+
+	} 
+}

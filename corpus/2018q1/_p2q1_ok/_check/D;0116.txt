@@ -1,0 +1,33 @@
+programa
+{
+	funcao inicio()
+	{
+
+		inteiro a,i
+		inteiro A[135]
+
+		para(i=0;i<135;i++){
+
+			escreva("Digite o número ", i, " do vetor: ")
+			leia(A[i])
+
+		}
+		comparaVetor(A, 135, i)
+
+	}
+
+	funcao comparaVetor(inteiro v[], inteiro n, inteiro k){
+
+		para (k=0;k<n;k++){
+
+			se(v[k] >20){
+
+				escreva("Existe numero maior a 20 nesse vetor")
+			}
+			senao {
+				escreva("Não existe número maior a 20 nesse vetor")
+			}
+		}
+
+	}
+}

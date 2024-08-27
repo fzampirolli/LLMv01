@@ -1,0 +1,18 @@
+programa
+{
+	funcao inicio()
+	{
+		inteiro tam,v[],i
+		escreva("Digite o tamanho")
+		leia(tam)
+		para(i=0;i<tam;i++){
+		v[i]=tam-i
+
+	}}
+funcao criarMatriz (inteiro m[][],inteiro v[tam]){
+	m[][]=m[v[tam]][v[tam]]
+escreva("digite os elementos da matiz")
+
+}
+
+}

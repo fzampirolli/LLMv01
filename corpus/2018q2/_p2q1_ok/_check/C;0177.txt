@@ -1,0 +1,34 @@
+programa {
+	inclua biblioteca Util
+	funcao inicio() {
+		const inteiro MAX=50
+		inteiro V[MAX], i, k
+		logico enc = falso
+		escreva("Preencher vetor: \n")
+		para(i=0; i<MAX; i++){
+			V[i] = Util.sorteia(-20, 50)
+			escreva(V[i]+"\n")
+		}
+		escreva("Escolha um elemento do vetor: \n")
+		leia (i)
+		escreva("O elemento do índice "+ i + " é " +V[i] + "\n")    
+
+				escreva("\nDigite o número que quer procurar.\n")
+		leia(k)
+
+		para (i = 0; i < MAX; i++)
+		{
+			se (V[i] == k)
+			{
+				escreva ("O número foi encontrado na posição: ", i, ".\n")
+				enc = verdadeiro  
+			}
+		}
+
+		se (nao enc) 
+		{
+			escreva ("O número não está nesse vetor\n")
+		}
+
+	}
+}

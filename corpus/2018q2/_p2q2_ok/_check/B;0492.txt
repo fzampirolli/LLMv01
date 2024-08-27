@@ -1,0 +1,67 @@
+programa
+{
+	funcao inicio()
+	{
+		caracter A[10][11]
+		caracter B[10][11]
+		inteiro l =0, c =0, a, b, venda = 0, i =0, k
+          caracter x
+
+		enquanto (l < 10){
+		 enquanto (c<11) {
+		 	A[l][c] = 'v'
+		 	c++
+		 }
+		 l++
+		}
+		l = 0
+		c = 0
+		 enquanto (l < 10){
+		 enquanto (c<11) {
+		 	B[l][c] = 'v'
+		 	c++
+		 }
+		 l++
+	}
+
+enquanto (i < 220) {
+	escreva("\n Setor A ou B? ")
+	leia(x)
+	escreva("\n Qual o numero da fileira? ")
+	leia(a)
+	escreva("\n Qual o numero da cadeira? ")
+	leia(b)
+
+	se (x == 'A') {
+		se (A[a][b] != 'p'){
+			A[a][b] = 'p'
+			venda = venda + 1
+
+		}
+		senao {
+			escreva("\n Lugar ja foi vendido")
+		}
+	}
+
+	se (x == 'B') {
+		se (B[a][b] != 'p'){
+			B[a][b] = 'p'
+			venda = venda + 1
+		}
+		senao {
+			escreva("\n Lugar ja foi vendido")
+		}
+	}
+	i++
+	escreva ("\n Digite 1 para continuar vendendo, 2 para exibir o total de ingressos vendidos ou 3 para encerrar o programa: ")
+	leia(k)
+ se (k == 2) {
+ 	escreva ("\n O total de ingressos vendidos foi de: ", venda)
+ }
+ se (k == 3) {
+ 	i = 220
+ }
+ }
+
+}
+}

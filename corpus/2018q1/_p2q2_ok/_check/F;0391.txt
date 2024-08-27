@@ -1,0 +1,25 @@
+programa
+{
+	funcao inicio()
+	{
+
+		caracter vetornome[45] ,vetordestino[45] ,
+
+		escreva("Digite o nome do passageiro")
+
+		para(inteiro i=0;i>45;i++){
+			leia(vetornome[i])
+		}
+		escreva("Digite o destino do passageiro")
+			para(inteiro i=0;i>45;i++){
+			leia(vetordestino[i])
+			}
+
+	}
+
+	funcao pesquisarNome (vetordestino[i],vetornome[i],destino){
+		escreva("Digite o nome do passageiro a ser procurado")
+		leia(nome)
+
+	}
+}

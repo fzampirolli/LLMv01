@@ -1,0 +1,322 @@
+
+programa
+{
+	inclua biblioteca Util --> u
+
+	funcao inicio()
+	{
+		const inteiro linhas = 7, colunas = 3, selecoes = 1, quantidade = 1
+		cadeia matriz_front[linhas][colunas]
+		real matriz_back[linhas][colunas], valor_total = 0.00
+
+para (inteiro linha = 0; linha < linhas; linha++)
+		{
+			para (inteiro coluna = 0; coluna < colunas; coluna++)
+			{
+
+				se (linha==0){
+
+				 	se(coluna==0){
+				matriz_front[linha][coluna] = "Código"
+				matriz_back[linha][coluna] = 0.00
+				 	}
+                        senao se (coluna==1){
+                    matriz_front[linha][coluna] = "Item"
+                    matriz_back[linha][coluna] = 0.00
+                        }
+                        senao se (coluna==2){
+                    matriz_front[linha][coluna] = "Preço Unitário"	
+                    matriz_back[linha][coluna] = 0.00
+                        }
+
+				 } 
+
+				 se (linha==1){
+
+				 	se(coluna==0){
+				matriz_front[linha][coluna] = "300"
+				matriz_back[linha][coluna] = 300.00
+				 	}
+                        senao se (coluna==1){
+                    matriz_front[linha][coluna] = "Pão de Queijo"
+                    matriz_back[linha][coluna] = 1.00
+                        }
+                        senao se (coluna==2){
+                    matriz_front[linha][coluna] = "1.30"
+                    matriz_back[linha][coluna] = 1.30
+                        }
+
+				 } 
+
+				  senao se (linha==2){
+
+				 	se(coluna==0){
+				matriz_front[linha][coluna] = "301"
+				matriz_back[linha][coluna] = 301.00
+				 	}
+                        senao se (coluna==1){
+                    matriz_front[linha][coluna] = "Bauru"
+                    matriz_back[linha][coluna] = 2.00
+                        }
+                        senao se (coluna==2){
+                    matriz_front[linha][coluna] = "1.40"	
+                    matriz_back[linha][coluna] = 1.40
+                        }
+
+				 } 
+
+				 senao se (linha==3){
+
+				 	se(coluna==0){
+				matriz_front[linha][coluna] = "302"
+				matriz_back[linha][coluna] = 302.00
+				 	}
+                        senao se (coluna==1){
+                    matriz_front[linha][coluna] = "Cachorro Quente"
+                    matriz_back[linha][coluna] = 3.00
+                        }
+                        senao se (coluna==2){
+                    matriz_front[linha][coluna] = "1.50"
+                    matriz_back[linha][coluna] = 1.50
+                        }
+
+				 } 
+
+				  senao se (linha==4){
+
+				 	se(coluna==0){
+				matriz_front[linha][coluna] = "303"
+				matriz_back[linha][coluna] = 303.00
+				 	}
+                        senao se (coluna==1){
+                    matriz_front[linha][coluna] = "Cheeseburger"
+                    matriz_back[linha][coluna] = 4.00
+                        }
+                        senao se (coluna==2){
+                    matriz_front[linha][coluna] = "1.40"	
+                    matriz_back[linha][coluna] = 1.40
+                        }
+
+				 } 
+                     senao se (linha==5){
+
+				 	se(coluna==0){
+				matriz_front[linha][coluna] = "304"
+				matriz_back[linha][coluna] = 304.00
+				 	}
+                        senao se (coluna==1){
+                    matriz_front[linha][coluna] = "Suco"
+                    matriz_back[linha][coluna] = 5.00
+                        }
+                        senao se (coluna==2){
+                    matriz_front[linha][coluna] = "2.20"
+                    matriz_back[linha][coluna] = 2.20
+                        }
+
+				 } 
+
+				  senao se (linha==6){
+
+				 	se(coluna==0){
+				matriz_front[linha][coluna] = "305"
+				matriz_back[linha][coluna] = 305.00
+				 	}
+                        senao se (coluna==1){
+                    matriz_front[linha][coluna] = "Refrigerante"
+                    matriz_back[linha][coluna] = 6.00
+                        }
+                        senao se (coluna==2){
+                    matriz_front[linha][coluna] = "1.00"               	
+                    matriz_back[linha][coluna] = 1.00
+                        }
+
+				 } 
+
+			}
+
+		}
+
+     enquanto (selecoes != 0)
+
+     {
+	escreva ("Digite o código do produto(300 a 305):")
+	leia (selecoes)
+
+     se (selecoes == 0) {
+
+para (inteiro linha = 0; linha < linhas; linha++)
+		{
+			para (inteiro coluna = 0; coluna < colunas; coluna++)
+			{
+
+				se (linha==0){
+
+				 	se(coluna==0){
+				matriz_front[linha][coluna] = "Código"
+				escreva("[", matriz_front[linha][coluna], "]")
+				matriz_back[linha][coluna] = 0.00
+				 	}
+                        senao se (coluna==1){
+                    matriz_front[linha][coluna] = "Item"
+                    escreva("   [", matriz_front[linha][coluna], "]")
+                    matriz_back[linha][coluna] = 0.00
+                        }
+                        senao se (coluna==2){
+                    matriz_front[linha][coluna] = "Preço Unitário"
+                    escreva("               [", matriz_front[linha][coluna], "]\n")	
+                    matriz_back[linha][coluna] = 0.00
+                        }
+
+				 } 
+
+				 se (linha==1){
+
+				 	se(coluna==0){
+				matriz_front[linha][coluna] = "300"
+				escreva("[", matriz_front[linha][coluna], "]")
+				matriz_back[linha][coluna] = 300.00
+				 	}
+                        senao se (coluna==1){
+                    matriz_front[linha][coluna] = "Pão de Queijo"
+                    escreva("      [", matriz_front[linha][coluna], "]")
+                    matriz_back[linha][coluna] = 1.00
+                        }
+                        senao se (coluna==2){
+                    matriz_front[linha][coluna] = "1.30"
+                    escreva("      [", matriz_front[linha][coluna], "]\n")	
+                    matriz_back[linha][coluna] = 1.30
+                        }
+
+				 } 
+
+				  senao se (linha==2){
+
+				 	se(coluna==0){
+				matriz_front[linha][coluna] = "301"
+				escreva("[", matriz_front[linha][coluna], "]")
+				matriz_back[linha][coluna] = 301.00
+				 	}
+                        senao se (coluna==1){
+                    matriz_front[linha][coluna] = "Bauru"
+                    escreva("      [", matriz_front[linha][coluna], "]")
+                    matriz_back[linha][coluna] = 2.00
+                        }
+                        senao se (coluna==2){
+                    matriz_front[linha][coluna] = "1.40"
+                    escreva("              [", matriz_front[linha][coluna], "]\n")	
+                    matriz_back[linha][coluna] = 1.40
+                        }
+
+				 } 
+
+				 senao se (linha==3){
+
+				 	se(coluna==0){
+				matriz_front[linha][coluna] = "302"
+				escreva("[", matriz_front[linha][coluna], "]")
+				matriz_back[linha][coluna] = 302.00
+				 	}
+                        senao se (coluna==1){
+                    matriz_front[linha][coluna] = "Cachorro Quente"
+                    escreva("      [", matriz_front[linha][coluna], "]")
+                    matriz_back[linha][coluna] = 3.00
+                        }
+                        senao se (coluna==2){
+                    matriz_front[linha][coluna] = "1.50"
+                    escreva("    [", matriz_front[linha][coluna], "]\n")	
+                    matriz_back[linha][coluna] = 1.50
+                        }
+
+				 } 
+
+				  senao se (linha==4){
+
+				 	se(coluna==0){
+				matriz_front[linha][coluna] = "303"
+				escreva("[", matriz_front[linha][coluna], "]")
+				matriz_back[linha][coluna] = 303.00
+				 	}
+                        senao se (coluna==1){
+                    matriz_front[linha][coluna] = "Cheeseburger"
+                    escreva("      [", matriz_front[linha][coluna], "]")
+                    matriz_back[linha][coluna] = 4.00
+                        }
+                        senao se (coluna==2){
+                    matriz_front[linha][coluna] = "1.40"
+                    escreva("       [", matriz_front[linha][coluna], "]\n")	
+                    matriz_back[linha][coluna] = 1.40
+                        }
+
+				 } 
+                     senao se (linha==5){
+
+				 	se(coluna==0){
+				matriz_front[linha][coluna] = "304"
+				escreva("[", matriz_front[linha][coluna], "]")
+				matriz_back[linha][coluna] = 304.00
+				 	}
+                        senao se (coluna==1){
+                    matriz_front[linha][coluna] = "Suco"
+                    escreva("      [", matriz_front[linha][coluna], "]")
+                    matriz_back[linha][coluna] = 5.00
+                        }
+                        senao se (coluna==2){
+                    matriz_front[linha][coluna] = "2.20"
+                    escreva("               [", matriz_front[linha][coluna], "]\n")	
+                    matriz_back[linha][coluna] = 2.20
+                        }
+
+				 } 
+
+				  senao se (linha==6){
+
+				 	se(coluna==0){
+				matriz_front[linha][coluna] = "305"
+				escreva("[", matriz_front[linha][coluna], "]")
+				matriz_back[linha][coluna] = 305.00
+				 	}
+                        senao se (coluna==1){
+                    matriz_front[linha][coluna] = "Refrigerante"
+                    escreva("      [", matriz_front[linha][coluna], "]")
+                    matriz_back[linha][coluna] = 6.00
+                        }
+                        senao se (coluna==2){
+                    matriz_front[linha][coluna] = "1.00"
+                    escreva("       [", matriz_front[linha][coluna], "]\n")	
+                    matriz_back[linha][coluna] = 1.00
+                        }
+
+				 } 
+
+			}
+
+		}
+
+		escreva("-----------------------------------------------------\n Total da compra:", valor_total)
+}
+senao {
+
+	escreva ("Digite a quantidade do produto):")
+	leia (quantidade)
+
+para (inteiro linha = 0; linha < linhas; linha++)
+		{
+			para (inteiro coluna = 0; coluna < colunas; coluna++)
+			{
+
+			 se (matriz_back[linha][0] == selecoes)
+			 {
+			 	 valor_total = matriz_back[linha][2]*quantidade
+
+			 	}
+
+			 	}
+
+			}
+
+		}
+
+	}
+
+	}
+}

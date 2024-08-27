@@ -1,0 +1,39 @@
+programa {
+inclua biblioteca Util
+	funcao inicio(){
+		const inteiro MAX=50
+		inteiro v[MAX], i, j, k, l, m
+		l=0
+		m=0
+		escreva("Preencher vetor: \n")
+		para (i=0;i<MAX;i++) {
+			v[i]=Util.sorteia(-20,50)
+		}
+		para (i=0;i<MAX;i++) {
+			j=i+1
+			escreva("Termo ", j, ": ", v[i],".\n")
+		}
+		para (i=0;i<MAX;i++) {
+			se (v[i]>v[8]){
+				l=l+1
+			}
+		}
+		escreva("O elemento de índice 8 é: ", v[8]," e existem ", l," termos maiores. \n")
+		escreva("Digite um número inteiro k: ")
+			leia(k)
+			se (-20>k ou k>50){
+				escreva("Digite um valor entre -20 e 50: ")   
+				leia(k)
+			}
+			para (i=0;i<MAX;i++) {
+				se (v[i]==k) {
+					j=i+1
+					escreva("k ocorreu na posição ", j, ". \n")
+					m=m+1
+				}
+			}
+				se (m==0){
+					escreva("k não foi encontrado no vetor. \n")
+				}
+			}
+}

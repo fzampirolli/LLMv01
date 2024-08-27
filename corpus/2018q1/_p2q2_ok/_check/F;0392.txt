@@ -1,0 +1,30 @@
+programa
+{
+	funcao inicio()
+	{
+
+		cadeia vetorNome [15]
+		inteiro vetorAcento[15]
+		para (inteiro i=0; i<15; i++)
+		escreva("\nDigite o nome do usuário: ")
+		leia(vetorNome[i])
+		escreva("\nDigite a poltrona do usuário: ")
+		leia(vetorAcento[i])
+
+		funcao pesquisarAcento (vetorAcento, vetorNome, Nome)
+		{
+		retorne vetorAcento	
+		}
+
+		funcao pesquisarAcento (inteiro vetorAcento[], cadeia vetorNome, cadeia Nome)
+		escreva("\nDigite o nome do usuário: ")
+		leia (Nome)
+		para (inteiro i=0; i<15; i++){
+			se (Nome == vetorNome[i]){
+			retorne  vetorAcento[i]
+			}
+			retorne " "
+		}
+
+	}
+}

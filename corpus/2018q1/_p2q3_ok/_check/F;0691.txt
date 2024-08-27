@@ -1,0 +1,38 @@
+programa
+{
+	funcao inicio()
+	{
+		inteiro tam , matriz[3][3] ,matrizrec,media, CriarMatriz
+
+		escreva("Digite os números")
+
+	para( i=0;i>3;i++){
+			leia(matriz[i][0])
+			para(inteiro j=0;j>3;j++){
+				leia(matriz[0][j]
+			}
+	}
+	} 
+
+	funcao CriarMatriz(){
+
+	matriz[tam][tam]=matrizrec[tam][tam]
+
+		{  
+
+	funcao ImprimirMatriz(){
+
+		matriz[tam][tam]=matrirec 	
+		escreva("A matriz criada é ", matrizrec)
+    } 
+
+    funcao MediaMatriz(matriz[tam][tam]){
+
+    	media = MediaMatriz
+    	matrizrec=criarmatriz(vetor[tam][tam])
+
+    	escreva("A média da matriz é ", media )
+       } 
+     }
+   }
+}

@@ -1,0 +1,20 @@
+programa
+{
+	funcao inicio()
+	{
+		cadeia vet[6]
+		inteiro i=0 ,qt,saldo
+		escreva(" Digite o cardapio")
+		para(i=0;i<6;i++){
+			leia(vet[i])
+
+		}
+
+		para(i=0;i<6;i++){
+			escreva(vet[i])
+	}
+
+	escreva("\n  Digite o Codigo do pedido : ")
+	}
+
+}

@@ -1,0 +1,39 @@
+programa
+{
+	funcao inicio()
+	{
+
+		inteiro A[21][21]
+		escreva("Matriz A com inteiros aleatórios entre 0 e 9: ", GeraMatriz ( Mat[][], L , C))
+
+		escreva("\n Matriz A: ",imprimeMatrizA(GeraMatriz,L,C))
+		}
+
+funcao GeraMatriz(inteiro Mat[][],inteiro L,inteiro C){
+	para (inteiro i=0; i<L; i++){
+		para (inteiro j=0; j<C;j++){
+			Mat[i][j] = Util.sorteia(0,10)
+		}
+	}
+
+}
+funcao imprimeMatrizA (inteiro GeraMatriz, inteiro L, inteiro C){
+	para (inteiro i=0; i<L; i++){
+			para ( inteiro j=0; j<C; j++){
+				escreva(Mat[i][j], "  ")
+			}
+			escreva("\n")
+
+}
+}
+funcao matrizTransposta(inteiro A){
+	para (inteiro i=0; i<L; i++){
+			para ( inteiro j=0; j<C; j++){
+				aux= A[i][j]
+				A[i][j] = B [j][i]
+				B[j][i] = aux
+			}
+			retorne matrizA
+	}
+}
+}

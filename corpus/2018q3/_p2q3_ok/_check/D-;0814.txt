@@ -1,0 +1,41 @@
+programa
+{
+	inclua biblioteca Util --> util
+
+	funcao inicio(){
+	const inteiro LIN=23, COL=23
+	inteiro l, c, N
+	inteiro A[LIN][COL], B[LIN][COL]
+
+		escreva("A matriz A foi gerada e sorteada e é:\n")
+		GeraMatriz(A, LIN, COL)
+
+		escreva("\nA matriz transposta de A, ou seja, a Matriz B é:\n")
+		matrizTransposta(A, B, LIN, COL)
+	}
+	funcao GeraMatriz (inteiro MatA[][], inteiro L, inteiro C) {
+		L = 23
+		C = 23
+		para(inteiro i=0; i< L; i++){
+			para(inteiro j=0; j<C;j++){
+				MatA[i][j] = util.sorteia(0,10)
+
+				escreva(MatA[i][j]," ; ")
+			}
+			escreva("\n")
+			}
+			}
+	funcao matrizTransposta (inteiro MatA[][], inteiro MatB[][], inteiro L, inteiro C){
+		L = 23
+		C = 23
+		para(inteiro i=0; i< L; i++){
+			para(inteiro j=0; j<C;j++)
+				se(L != C){
+					MatA[L][C] = MatA[C][L]
+
+					 escreva(MatA[i][j], " ; ")
+				}
+			}
+			escreva("\n")
+			}
+				}

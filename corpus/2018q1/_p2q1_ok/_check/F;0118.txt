@@ -1,0 +1,30 @@
+programa
+{
+	funcao inicio()
+	{
+		inteiro n 
+		inteiro i 
+		cadeia vetor[]
+		k=40
+
+         enquanto (n<115){
+          	escreva ("Digite os valores do vetor:\n")
+          	leia(n)
+          	i++
+          } 
+          se (n==40) {
+          	escreva ("Existe número = 40 nesse vetor")
+          }
+          senao {
+          	escreva("Não existe número= 40 nesse vetor")
+	}
+
+}
+
+     funcao logico numero_existente ( vetor[], inteiro n, inteiro k) {
+     	se (vetor[i]==k){
+     		escreva ("True")
+     	}
+     	senao { escreva ("False")
+     }
+     }

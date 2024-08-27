@@ -1,0 +1,60 @@
+ programa
+{
+	inclua biblioteca Util
+
+			funcao inicio()
+	{
+		caracter Conceitos[150][4]
+		inteiro l, c
+		real m, n, o, p, med
+		caracter conceitos[5]={'A', 'B', 'C', 'D', 'F'}
+		inteiro i, j, valor
+		para (i=0; i<150; i++){
+			para (j=0; j<4; j++){
+				valor = Util.sorteia(0,4)
+				Conceitos[i][j]=conceitos[valor]
+
+	}
+
+}
+
+	}
+	funcao GeraMedia (&Conceitos[][]) {
+		real m, n, o, p, med
+		inteiro i, j
+		para (i=0; i<150; i++){
+			para (j=0; j<4; j++){
+			se(Conceitos[i][j]=="A"){
+				Conceitos[i][j]= 4,0	
+			}
+				senao {
+					se(Conceitos[i][j]=="B"){
+				Conceitos[i][j]=3,0	
+			}
+				senao {
+					se(Conceitos[i][j]=="C"){
+				Conceitos[i][j]= 2,0	
+			}
+				senao {
+					se(Conceitos[i][j]=="D"){
+				Conceitos[i][j]= 1,0	
+			}
+			senao {
+				se(Conceitos[i][j]=="F"){
+				Conceitos[i][j]= 0,0	
+			}
+			}
+				}
+				}
+				}
+			}
+			m=Conceitos[i][0]*0,32
+			n=Conceitos[i][1]*0,1
+			o=Conceitos[i][2]*0,15
+			p=Conceitos[i][3]*0,43
+			med[i]=(m+n+o+p)
+		}
+			med=
+	}
+
+}

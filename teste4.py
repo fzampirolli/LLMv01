@@ -1,12 +1,12 @@
-import os, re
+import os, re, shutil
 
-import torch
-from torch.utils.data import Dataset
-from transformers import AutoTokenizer, AutoModelForSequenceClassification, Trainer, TrainingArguments
+# import torch
+# from torch.utils.data import Dataset
+# from transformers import AutoTokenizer, AutoModelForSequenceClassification, Trainer, TrainingArguments
 
-# Defina seu tokenizer e modelo
-tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased", clean_up_tokenization_spaces=True)
-model = AutoModelForSequenceClassification.from_pretrained("bert-base-uncased", num_labels=5)
+# # Defina seu tokenizer e modelo
+# tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased", clean_up_tokenization_spaces=True)
+# model = AutoModelForSequenceClassification.from_pretrained("bert-base-uncased", num_labels=5)
 
 # Função para ler arquivos de texto e Java em subpastas recursivas
 label_mapping = {
@@ -153,43 +153,97 @@ def remove_comments(text):
     
     return text
 
+def rename_classes(text):
+    # Padrão para encontrar e renomear classes
+    class_pattern = r'public class \w+_(\w+) {'
+    # Substituir pelo novo nome da classe
+    text = re.sub(class_pattern, r'public class \1 {', text)
+    
+    return text
+
+def rename_file(subdir, file, label_str, contador, text):
+    # Obter a extensão do arquivo original
+    file_extension = os.path.splitext(file)[1]
+    new_filename = f"{label_str};{contador:04d}{file_extension}"
+    
+    # Caminho completo para o novo arquivo
+    new_file_path = os.path.join(subdir, new_filename)
+    
+    # Renomear o arquivo
+    os.rename(os.path.join(subdir, file), new_file_path)
+    
+    # Escrever o novo conteúdo no arquivo renomeado
+    with open(new_file_path, 'w', encoding='utf-8') as f:
+        f.write(text)
+    
+    return new_filename
+
 def read_files_from_subfolders(root_folder):
     texts = []
     labels = []
-    for subdir, _, files in os.walk(root_folder):
-        # print(subdir)
-        for file in files:
-            if file.endswith('.java'): #file.endswith('.por') or file.endswith('.txt') or 
-                # print(file)
-                label_str = file.split(';')[0]
-                label = label_mapping.get(label_str, -1)  # Use -1 for unknown labels
-                # if label!=4:
-                #     continue
-                try:
-                    with open(os.path.join(subdir, file), 'r', encoding='utf-8') as f:
-                        text = f.read()
-                except UnicodeDecodeError:
-                    try:
-                        with open(os.path.join(subdir, file), 'r', encoding='latin-1') as f:
-                            text = f.read()
-                    except UnicodeDecodeError:
-                        print(f"Skipping file {file} due to decoding error")
-                        continue
-                text = remove_comments(text)
+    contador = 1
+    # Definindo a ordem das pastas
+    priority_folders = ['q1_ok', 'q2_ok', 'q3_ok']
+    
+    for priority_folder in priority_folders:
+        for subdir, _, files in sorted(os.walk(root_folder)):
+            if priority_folder in subdir:
+                for file in files:
+                    if file.endswith('.class'):
+                        os.remove(os.path.join(subdir, file))
+                    # if file.endswith('.por'):    
+                    #     os.rename(os.path.join(subdir, file), os.path.join(subdir, file)[:-3]+'.txt')
+                    #     continue
+                        
+                    if file.endswith('.java') or file.endswith('.por') or file.endswith('.txt'): 
+                        # print(file)
+                        label_str = file.split(';')[0]
+                        label_str = label_str.split(',')[0]
+                        label = label_mapping.get(label_str, -1)  # Use -1 for unknown labels
+                        # if label!=4:
+                        #     continue
+                        try:
+                            with open(os.path.join(subdir, file), 'r', encoding='utf-8') as f:
+                                text = f.read()
+                        except UnicodeDecodeError:
+                            try:
+                                with open(os.path.join(subdir, file), 'r', encoding='latin-1') as f:
+                                    text = f.read()
+                            except UnicodeDecodeError:
+                                print(f"Skipping file {file} due to decoding error")
+                                continue
+                        text = remove_comments(text)
 
-                texts.append(text)
-                labels.append(label)
 
-                # text_py = java2py(text)
-                # if not "#ERROR Java code:" in text_py:
-                #     texts.append(text)
-                #     labels.append(label) 
+                        texts.append(text)
+                        labels.append(label)
+                        if file.endswith('.java'):
+                            
+                            ######################### MELHORAR CONVERSOR !!!!
+                            text_py = java2py(text)
+                            #########################
 
-                # print("================================================ENTRADA:")
-                # #print(label_str, label)
-                # print(text)
-                # print("======SAÍDA:")
-                # print(text_py)
+                            if not "#ERROR Java code:" in text_py:
+                                texts.append(text_py)
+                                labels.append(label) 
+                                # Escrever o novo conteúdo no arquivo renomeado
+                                with open("./corpus/py/"+file[:-4]+"py", 'w', encoding='utf-8') as f:
+                                    f.write(text_py)
+                            else:
+                                print("#ERROR Java code:",file)
+
+
+                        print("================================================ENTRADA:")
+                        #print(label_str, label)
+                        print(text)
+                        print("======SAÍDA:")
+                        text = rename_classes(text)
+                        print(text)
+
+                        # new_filename = rename_file(subdir, file, label_str, contador, text)
+                        #contador += 1
+                        #print(f"Arquivo renomeado para: {new_filename}")
+
     return texts, labels
 
 # Exemplo de uso

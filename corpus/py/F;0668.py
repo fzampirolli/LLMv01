@@ -1,0 +1,5 @@
+Scanner entrada = new Scanner (System.in)
+print("Digite o tamanho do vetor: ")
+int n = int(input())
+print("Digite os elementos do vetor: ")
+int x = int(input())

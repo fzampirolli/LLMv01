@@ -1,0 +1,38 @@
+programa
+{ 
+	inclua biblioteca Util --> util
+
+	funcao inicio() 
+	{
+		const inteiro MAX = 50 
+		inteiro vetor[MAX], i, k
+		logico achou = falso
+		para (i=0; i < MAX; i++)
+		{
+			vetor[i] = util.sorteia(-20, 50) 
+
+		}
+
+		escreva ("Vetor: \n")
+
+		para(i= 0; i< 10; i++)          
+		{
+			escreva (vetor[i], " ")
+		} escreva ("Qual número deseja procurar? ")                    
+		leia (k)
+
+		para (inteiro posicao = 0; posicao < 5; posicao++)    
+		{
+			se (vetor[posicao] == k)
+			{
+				escreva ("Encontrado na posição: ", posicao, "\n")
+				achou = verdadeiro  
+			}
+		}
+
+		se (nao achou) 
+		{
+			escreva ("O número não está no vetor\n")
+		}
+	}
+	}

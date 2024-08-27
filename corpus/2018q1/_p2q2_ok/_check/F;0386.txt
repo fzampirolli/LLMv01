@@ -1,0 +1,35 @@
+programa
+{
+	funcao inicio()
+	{
+		cadeia vNome[35], pesquisarNome, acento=0
+     	inteiro vAcento[35]
+
+		para (inteiro i=0; i <= 3; i++){
+		  escreva ("\nDigite o nome do passageiro ",i+1,": ")
+	  	  leia (vNome[i])
+
+		  escreva ("\nDigite o acento do passageiro ",i+1,": ")
+		  leia (vAcento[i])
+		}
+
+		pesquisarNome = acento
+
+	}
+
+     funcao inteiro pesquisarNome (cadeia vNome[]) {
+     	      inteiro acento
+     	      escreva ("\nInforme o acento do passageiro: ")
+     	      leia (acento)
+
+     	se (acento > 0 e acento < 35){
+     	    escreva ("\nNome do Passageiro: ", vNome[acento], ". E acento: ", acento)
+     	}
+     	    senao {
+     	    escreva ("\nAcento não existente.")
+
+     	}
+     	retorne  acento
+     }
+
+}

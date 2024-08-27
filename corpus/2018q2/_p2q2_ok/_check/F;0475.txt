@@ -1,0 +1,20 @@
+programa
+{
+	funcao inicio()
+	{
+		inteiro L[10] [11] , iL , jL 
+		inteiro A[10] [11] ,iA, jA 
+
+            jL=0
+		para (iL=0; iL<10; iL++){
+
+			jL++
+
+			L[iL][jL]=jL
+
+			escreva(L[iL][jL], "V" )
+
+		}
+
+	}
+}

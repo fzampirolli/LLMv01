@@ -1,0 +1,55 @@
+programa
+{
+	funcao inicio()
+	{
+		inteiro n
+		inteiro M1[10][11]={{0,0,0,0,0,0,0,0,0,0,0},
+						{0,0,0,0,0,0,0,0,0,0,0},
+						{0,0,0,0,0,0,0,0,0,0,0},
+						{0,0,0,0,0,0,0,0,0,0,0},
+						{0,0,0,0,0,0,0,0,0,0,0},
+						{0,0,0,0,0,0,0,0,0,0,0},
+						{0,0,0,0,0,0,0,0,0,0,0},
+						{0,0,0,0,0,0,0,0,0,0,0},
+						{0,0,0,0,0,0,0,0,0,0,0},
+						{0,0,0,0,0,0,0,0,0,0,0}}
+		inteiro M2[10][11]={{0,0,0,0,0,0,0,0,0,0,0},
+						{0,0,0,0,0,0,0,0,0,0,0},
+						{0,0,0,0,0,0,0,0,0,0,0},
+						{0,0,0,0,0,0,0,0,0,0,0},
+						{0,0,0,0,0,0,0,0,0,0,0},
+						{0,0,0,0,0,0,0,0,0,0,0},
+						{0,0,0,0,0,0,0,0,0,0,0},
+						{0,0,0,0,0,0,0,0,0,0,0},
+						{0,0,0,0,0,0,0,0,0,0,0},
+						{0,0,0,0,0,0,0,0,0,0,0}}
+		inteiro return=1
+		escreva("Opções:\n1-Venda de ingressos \n2-Total de ingressos vendidos\n3-encerrar programa\nOpção: ")
+		leia(n)
+		inteiro s,f,c,comprar,vendido1=0,vendido2=0,somaV
+		se (n==1){
+
+			escreva("\n=====================\n1-setor 1\n2-setor 2\nsetor: ")
+			leia(s)
+			escreva("\n=====================\nnumero da fileira (0-9): ")
+			leia(f)
+			escreva("\n=====================\nnúmero da cadeira (0-10): ")
+			leia(c)
+			 se (s==1 e M1[f][c]==0){	
+				M1[f][c]=1
+				escreva("\nLocal disponivel,compra realizada com sucesso!")
+				vendido1++		
+		}senao{
+			 se (s==2 e M1[f][c]==0){	
+				M1[f][c]=1
+				escreva("\nLocal disponivel,compra realizada com sucesso!")	
+				vendido2++
+			 }	
+		}
+
+	}
+	se(n==2)
+	somaV=vendido1+vendido2
+	escreva("Total de ingressos vendidos: "somaV)
+
+}}

@@ -1,0 +1,20 @@
+
+programa
+{
+	inclua biblioteca Util --> u
+	funcao inicio()
+	{
+		inteiro A[21][21]
+
+		funcao GeraMatriz(inteiro Mat[][], inteiro L, inteiro C){
+			para (inteiro i = 0, i < L; i++){
+			para(inteiro j = 0; j < C; j++){
+				Mat[i][j] = Util.sorteia(0, 10) 
+			}}}
+		funcao imprimeMatriz(inteiro A[][], inteiro i, inteiro j)
+			enquanto (i<=21, j<=21){
+				escreva(" ", A[i][j])
+			}
+
+	}
+}

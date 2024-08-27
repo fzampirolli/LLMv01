@@ -1,0 +1,64 @@
+programa
+{
+	funcao inicio()
+	{
+	 inteiro codigo[6], i, co=0, c=1, q
+	 real preco[6], t=0
+
+	 para(i=0;i<6;i++){
+	 	codigo[i]=100+co
+	 	co=co+1
+	 }	 
+	 preco[0]=1.10
+	 preco[1]=1.30
+	 preco[2]=1.50
+	 preco[3]=1.30
+	 preco[4]=2.00
+	 preco[5]=1.00
+
+	 escreva("Código  ","    Item    ",    "  Preço\n")
+	 escreva(codigo[0], "    Pão de Queijo  ",  preco[0],"\n")
+	 escreva(codigo[1], "    Bauru          ",  preco[1],"\n")
+	 escreva(codigo[2], "    Cachorro Quente",  preco[2],"\n")
+	 escreva(codigo[3], "    Cheeseburger   ",  preco[3],"\n")
+	 escreva(codigo[4], "    Suco           ",  preco[4],"\n")
+	 escreva(codigo[5], "    Refrigerante   ",  preco[5],"\n")
+
+	enquanto(c>0){
+	escreva("\nDigite o código do produto: ")
+	leia(c)
+
+	se(c==100){
+		escreva("Digite a quantidade do produto: ")
+	leia(q)
+		t=preco[0]*q
+	}
+	se(c==101){
+		escreva("Digite a quantidade do produto: ")
+	leia(q)
+		t=t+preco[1]*q
+	}
+	 	se(c==102){
+	 		escreva("Digite a quantidade do produto: ")
+	leia(q)
+		t=t+preco[2]*q
+	 }
+	 se(c==103){
+	 	escreva("Digite a quantidade do produto: ")
+	leia(q)
+		t=t+preco[3]*q
+	 }
+	 se(c==104){
+	 	escreva("Digite a quantidade do produto: ")
+	leia(q)
+		t=t+preco[4]*q
+	 }
+	 se(c==105){
+	 	escreva("Digite a quantidade do produto: ")
+	leia(q)
+		t=t+preco[5]*q
+	 }	
+	}
+	escreva("\nTotal da compra: ", t)
+	}
+}

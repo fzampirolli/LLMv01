@@ -1,0 +1,43 @@
+programa
+{
+funcao cadeia preenchevetor (caracter vetornome[], caracter vetorassento[])
+
+	caracter vetornome [34], vetorassento[34]
+	inteiro i, nome, assento
+
+	para (i=0; i<35; i++)
+		escreva ("Digite o nome do passageiro: ")
+		leia (nome)
+		vetornome [i] = nome
+
+		retorne vetornome 
+
+	para (i=0; i<35; i++)
+	escreva ("Digite o assento do passageiro: ")
+		leia (assento)
+		vetorassento [i] = assento
+
+		retorne vetorassento
+
+	funcao cadeia pesquisarnome (caracter vetornome[], caracter  vetorassento[], inteiro  acento){
+
+		se (nome == vetornome [i]) {
+			retorne nome 
+		}
+
+		 senao {
+		 	retorne " " 
+
+		 }
+
+	}
+
+	funcao inicio(){
+
+	preenchevetor (nome, assento)	
+
+	pesquisarnome (vetx[], vety[], ace)
+	escreva ("o nome pesquisado foi: " nome)
+
+	}
+}

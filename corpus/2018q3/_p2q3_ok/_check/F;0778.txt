@@ -1,0 +1,13 @@
+programa { inclua biblioteca Util --> util
+           inclua biblioteca Matematica --> mat
+
+     real A[5][5]
+
+    	funcao GeraMatriz( inteiro Mat [][], inteiro L, inteiro C) {
+		para (inteiro i=0; i<L; i++) { 
+			para (inteiro j= 0; j<C; j++){
+				Mat [i][j] = Util.sorteia(0,10) 
+			}
+		}
+	}
+}

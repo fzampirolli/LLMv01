@@ -1,0 +1,49 @@
+programa
+{
+	funcao inicio()
+	{
+		inteiro ind, cod, quant
+		inteiro A[] = {100, 101, 102, 103, 104, 105}
+		caracter B[] = {'a', 'b', 'c', 'd', 'f', 'g'}
+		real C[] = {1.10, 1.30, 1.50, 1.30, 2.00, 1.00}
+		real preco,preco1,preco2,preco3,preco4,preco5,preco6
+
+		para(ind=0; ind<6; ind++){
+		escreva(A[ind], " - ",B[ind], "= ", C[ind], "\n")
+		}
+
+		escreva("digite o código? ")
+		leia(cod)
+
+		enquanto(cod>0){
+		escreva("digite o código? ")
+		leia(cod)
+		escreva("Qual a quantidade? ")
+		leia(quant)
+
+		se(cod==100){
+			preco1=quant*1.10
+		}senao
+			se(cod==101){
+				preco2=quant*1.30
+			}senao
+			se(cod==102){
+				preco3=quant*1.50
+			}senao
+			se(cod==103){
+				preco4=quant*1.30
+			}senao
+			se(cod==104){
+				preco5=quant*2.00
+			}senao
+			se(cod==105){
+				preco6=quant*1.00
+			}
+
+		preco=preco1+preco2+preco3+preco4+preco5+preco6
+
+		escreva("Total a pagar: ", preco)
+
+		}
+	}
+}

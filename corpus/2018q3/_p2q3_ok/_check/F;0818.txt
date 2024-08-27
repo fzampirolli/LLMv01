@@ -1,0 +1,27 @@
+programa
+{
+	inclua biblioteca Util
+	inclua biblioteca Matematica
+	funcao inicio()
+	inteiro L, i j
+	{
+
+	}
+	funcao GeraMatriz(inteiro Mat[][], inteiro L, inteiro C){
+		para (inteiro i=0; i<L; i++){
+			para (inteiro j=0; j<C; j++){
+				Mat[i][j] = Util.sorteia(0,10)
+			}
+		}
+	}
+	funcao  ImprimeMatrizA(inteiro num){
+	para(inteiro i=0; i<L; i++){
+		escreva(" "+ Mat[i][j])
+	}
+
+}
+funcao RetornaMaior(inteiro num){
+	inteiro a
+	a = Matematica.
+}
+}

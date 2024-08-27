@@ -1,0 +1,34 @@
+programa
+{ inclua biblioteca Util 
+	funcao inicio()
+	{ inteiro k,logica, n
+		se (logica=verdadeiro) {
+		escreva ("Existe número igual a 40 nesse vetor")
+		se (logica=falso)
+		escreva("Não Existe número igual a 40 nesse vertor")
+		}}
+
+		funcao vetor (inteiro  i,inteiro  k,inteiro v[]){
+
+		escreva ("Escreva o tamanho no vetor:  ")
+		leia (k)
+
+		para(i=0;i<k;i++){
+			escreva ("Digite o vetor de posição[",i,"]:")
+			leia(v[i])
+			}
+	}
+
+	funcao logica (inteiro i, inteiro v[],real k){
+
+		para(i=0;i<k;i++){
+			se(v[i]==40){
+				retorne verdadeiro
+				se(nao(v[i]==40)){
+				retorne falso
+
+			}
+
+			}
+	}
+}}

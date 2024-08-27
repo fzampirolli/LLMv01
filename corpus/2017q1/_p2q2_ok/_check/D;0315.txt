@@ -1,0 +1,21 @@
+programa
+{
+	funcao inicio()
+	{
+		inteiro Cod[2], n, c
+		cadeia cardapio[]= {"Código    Item        Preço Unitário\n100     pão de queijo   1,10\n101     bauru           1,30\n102     cachorro quente 1,50\n103     cheeseburger    1,30\n104     suco            2,00\n105     refrigerante    1,00\n\n"}
+
+		para (n=0; n<1; n++)
+		escreva (cardapio[n])
+
+	faca {
+
+		escreva ("digite o código do produto (100 a 105): ")
+		leia (c)
+
+		escreva ("digite a quantidade do produto: ")
+		leia (c)
+	}
+		enquanto (c!=0)
+	}
+}

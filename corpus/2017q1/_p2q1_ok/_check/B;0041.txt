@@ -1,0 +1,48 @@
+programa
+{
+
+	funcao inicio()
+	{
+		inteiro  a[6], b[6], c[6]
+		a[0]=0
+		a[1]=7
+		a[2]=32
+		a[3]=-12
+		a[4]=42
+		a[5]=100
+		b[0]=23
+		b[1]=-80
+		b[2]=6
+		b[3]=-2
+		b[4]=9
+		b[5]=6
+		ImprimirVetor (a) 
+		escreva("\n")
+		ImprimirVetor (b)
+		escreva("\n")
+		MaioresElementos(a, b, c)
+
+	}	
+	funcao ImprimirVetor (inteiro v[]) 
+	{
+		para(inteiro i = 0; i < 6; i++)
+		{
+			escreva (v[i], " ")
+
+		}
+	}
+	funcao MaioresElementos (inteiro v[], inteiro  w[], inteiro  z[])
+	{
+		para(inteiro i=0;i<6; i++)
+		{
+			se (v[i]>w[i]){
+				z[i]=v[i]
+			}
+			senao{
+				z[i]=w[i]
+			}
+			escreva (z[i], " ")
+		}
+	}
+
+}

@@ -1,0 +1,66 @@
+programa
+{
+	funcao inicio()
+	{
+		inteiro i, j
+		caracter livre = 'v'
+		caracter vendido = 'p'
+		caracter menu = 'A'
+		caracter A = 'A'
+		caracter B = 'B'
+		caracter C = 'C'
+		inteiro k = 0
+		inteiro total = 0
+		inteiro setor = 0
+		inteiro poltrona = 0
+		caracter setor1 [10][11]
+		caracter setor2 [10][11]
+		para (i=0; i<=9; i++){
+			para (j=0; j<=10; j++){
+				setor1 [i][j] = livre
+			}
+		}
+			para (i=0; i<=9; i++){
+			para (j=0; j<=10; j++){
+				setor2 [i][j] = livre
+			}
+		}
+		enquanto (menu == A ou menu == B){
+		escreva ("A) vender ingresso B) Exibir o total de ingressos vendidos C) Encerrar o programa\n")
+		leia (menu)
+		se (menu == A){
+			escreva ("selecione o setor 1 ou 2\n")
+			leia (setor)
+			se (setor == 1){
+				escreva ("Digite a fileira desejada\n")
+				leia (k)
+				escreva ("Digite a poltrona desejada\n")
+				leia (poltrona)
+				se (setor1[k][poltrona] == livre){
+					setor1[k][poltrona] = vendido
+					escreva ("lugar comprado\n")
+					total= total + 1
+				} senao {
+					escreva ("cadeira já vendida\n")
+				}
+			}
+			se (setor == 2){
+				escreva ("Digite a fileira desejada\n")
+				leia (k)
+				escreva ("Digite a poltrona desejada\n")
+				leia (poltrona)
+				se (setor2[k][poltrona] == livre){
+					setor2[k][poltrona] = vendido
+					escreva ("lugar comprado\n")
+					total = total + 1
+				} senao {
+					escreva ("cadeira já vendida\n")
+				}
+			}
+		}
+		se (menu == B){
+			escreva ("Foram vendidos " , total, " lugares\n")
+		}
+	}
+} 
+}

@@ -1,0 +1,38 @@
+programa
+{
+	funcao inicio()
+	{
+		cadeia vetorNome [2], vetorDestino [2], destino
+
+		preencheVetor (vetorNome, vetorDestino)
+
+		escreva("Digite o destino: ")
+		leia(destino)
+
+		pesquisaNome (vetorNome, vetorDestino, destino)
+
+	}
+	funcao preencheVetor (cadeia &vetorNome[], cadeia &vetorDestino[])
+	{
+		para (inteiro i=0; i<2; i++){
+		escreva("Digite o nome do passageiro", i+1, ": ")
+		leia(vetorNome [i])
+
+		escreva("Digite o destino do passageiro", i+1, ": ")
+		leia(vetorDestino[i])
+		}
+	}
+	funcao pesquisaNome (cadeia vetorNome[], cadeia vetorDestino[], cadeia destino){
+		para (inteiro i=0; i<2; i++){
+			se (destino == vetorDestino[i]){
+				escreva("O passageiro é: ", vetorNome [i], " e o destino é: ", vetorDestino[i]) 
+			}
+
+			senao {
+				se (destino!=vetorDestino [i])
+				escreva("\nDestino não existe!")
+			}
+		}
+	}
+
+}

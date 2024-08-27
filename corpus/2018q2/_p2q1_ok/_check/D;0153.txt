@@ -1,0 +1,34 @@
+programa
+{
+	inclua biblioteca Util
+	funcao inicio()
+	{
+		const inteiro MAX=50
+		inteiro V[MAX], i, MaiorA, k
+
+		escreva ("Preencher vetor: \n")
+		para(i=0; i<MAX; i++){
+			V[i] = Util.sorteia(-20, 50)
+		}
+		escreva ("", V[11])    
+		MaiorA=V[11]
+		para (inteiro s=0; s<MAX; s++){
+			se (V[s]>MaiorA){
+				MaiorA=V[s]
+				escreva("\n maior valor que V[11]: ",MaiorA)         
+			}}
+
+			escreva ("\ndigite um número inteiro: ")
+			leia(k)
+
+	para(inteiro j=0; j<MAX; j++){
+
+			se( k==V[j]){
+
+			escreva("\nocorreu na posição: ")    
+			}
+			senao{
+				escreva("\nnão foi encontrado no vetor")   
+			}
+
+}}}

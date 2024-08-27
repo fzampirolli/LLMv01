@@ -1,0 +1,44 @@
+programa
+{
+	funcao inicio()
+	{
+	 inteiro lin = 0
+	 inteiro col = 0
+	 inteiro indl, indc, tam_lin = 0, tam_col=0
+
+	 escreva ("Entre com o tamanho da Linha: ")
+	 leia (tam_lin)
+
+	 se (tam_lin % 2 == 0)
+	 { escreva ("")}
+	 senao { escreva ("\nValor deve ser Par, comece novamente o programa.")}
+
+	 escreva ("\nEntre com o tamanho da Coluna: ")
+	 leia (tam_col)
+
+	 se (tam_col % 2 == 0)
+	 {escreva ("")}
+	 senao { escreva ("\nValor deve ser Par, comece novamente o programa.")}
+
+	 cadeia mat[][]
+	 cadeia ler
+
+	 cadeia ler_matriz( [tam_lin][tam_col])
+
+	 }
+
+	funcao cadeia ler_matriz (inteiro tam_lin, inteiro tam_col){
+
+	para ( indl = 0; indl < tam_lin; indl ++){
+
+		para (indc = 0; indc < tam_col; indc ++){
+
+		leia (mat [indl][indc])
+
+		escreva (mat [indl][indc])
+
+		}
+	}
+	}
+
+}

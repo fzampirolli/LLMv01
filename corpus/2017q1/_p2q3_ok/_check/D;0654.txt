@@ -1,0 +1,33 @@
+programa
+{
+	funcao inicio()
+	{
+
+	}
+	funcao LerMatriz( inteiro m[][], inteiro n){
+		inteiro l=0, c=0
+		para(l=0;l<n;l++){
+			para(c=0;c<n;c++){
+				escreva("\nDigite o valor", l, ", ", c)
+				leia(m[l][c])
+			}
+		}
+	}
+	funcao NovaMatriz ( inteiro m[][], inteiro n){
+		inteiro b[n][n], l, c
+		para(l=0;l<2;l++){
+			para(c=2;c<4;c++){
+				b[l][c]=
+			}
+
+	}
+	funcao ImprimeMatriz (inteiro m[][],inteiro n){
+		escreva ("\nA matriz é:")
+		para(l=0;l<n;l++){
+		para(c=0;c<n;c++){
+			escreva("\t\t", m[l][c], "\t\t")
+	}
+		}
+	}
+
+}

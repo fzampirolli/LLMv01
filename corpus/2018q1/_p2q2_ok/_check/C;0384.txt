@@ -1,0 +1,33 @@
+programa
+{
+	funcao inicio()
+	{
+		inteiro i ,k,A
+		cadeia nome,acento
+          cadeia vetorNome[]= {"francisco" , "caio", "Pedro"}
+          cadeia vetorAcento[]= {"1a","1b", "1c"}
+
+          escreva("Digite o numero do acento: ")
+		leia(acento)
+
+		nome = pesquisarNome
+
+          escreva("O" , acento, " esta ocupado pelo", nome)
+
+	}
+
+          funcao pesquisarNome(cadeia vetorNome[], cadeia vetorAcento[], cadeia acento) {
+
+               para (inteiro posicao=0; posicao <3; posicao ++)
+		{ 
+			se(vetorAcento[posicao]==acento)
+			 { 
+			 	vetorNome[]= vetorNome[posicao]}
+
+			senao{ 
+               	escreva("  ")
+
+          	}
+
+          }
+          }

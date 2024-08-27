@@ -1,0 +1,15 @@
+programa
+{
+	funcao Util
+	funcao GeraMat(caracter Mat[][], inteiro nlinhas, inteiro ncolunas) {
+		caracter conceitos [5] = {'A','B','C','D','F'}
+		inteiro i , j, valor
+		para (i=0; i<nlinhas; i++) {
+			para(j=0; j<ncolunas; j++) {
+				valor = Util.sorteia(0,4)
+				Mat[i][j] = conceitos [valor]
+			}
+		}
+
+	}
+}

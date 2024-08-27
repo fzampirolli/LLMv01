@@ -1,0 +1,21 @@
+programa 
+{
+	funcao inicio()
+	{inteiro A[6]
+	inteiro B[6]
+	inteiro C[6]
+
+	para (inteiro i = 0; i < 6; i++)
+	leia (A[i])
+
+	para (inteiro i = 0; i < 6; i++)
+	leia (B[i])
+
+	para (inteiro i = 0; i < 6; i++)
+	escreva ("ImprimeVetorA(): ", A[i])
+
+	para (inteiro i = 0; i < 6; i++)
+	escreva ("ImprimeVetorB(): ", B[i])
+
+	}
+}

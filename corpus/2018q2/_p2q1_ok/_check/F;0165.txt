@@ -1,0 +1,35 @@
+programa
+{
+	inclua biblioteca Util
+	funcao inicio()
+	{
+	const inteiro MAX=50
+	inteiro V [MAX] ,i , contador =0 
+	escreva ("preencher vetor:\n")
+	para(i=0;i<MAX;i++){
+
+	V[i]= Util.sorteia(-20,50)
+
+	}
+
+	para (i=0;i<MAX;i++){
+		V[i]=Util.sorteia(-20,50)   
+		escreva("\n",V[i])
+	}
+
+	para (i=0;i<MAX;i++){ 
+		V[i]=Util.sorteia(-20,50)     
+		escreva( "\n a posição de indice 13 é " ,V[12])   
+			}
+
+	para (i=0;i<MAX;i++){
+		V[i]=Util.sorteia(-20,50)      
+
+		se( V[12]<V[i]){
+			contador ++
+			escreva ( "\n números maiores que  " , V[12] , "é" , contador)   
+		}
+
+	}
+}
+}            

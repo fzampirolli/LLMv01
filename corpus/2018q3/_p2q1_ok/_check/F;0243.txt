@@ -1,0 +1,22 @@
+programa
+{
+	funcao inicio()
+	{
+		inteiro n, n1=0, c=0
+
+			escreva ("\nDigite um número positivo ímpar: ")
+			leia (n)
+
+		para (c=0; c<n; c++){
+
+			escreva ("\nDigite um valor inteiro para seu vetor: ")
+			leia (n1)
+
+			}
+
+		inteiro V[]={n1}	
+
+		escreva (V[n])
+
+	}
+}

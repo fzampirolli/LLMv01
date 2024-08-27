@@ -1,0 +1,29 @@
+programa
+{
+	funcao inicio()
+	{
+		inteiro ind=0
+		inteiro A[6]={100,101,102,103,104,105}
+		real B[6]={1.10,1.30,1.50,1.30,2.00,1.00},p=0, total=0, quant
+
+	escreva(" Cardapio\n 100 pão de queijo 1,10\n 101 Bauru 1,30\n 102 cachorro quente 1,50\n 103 cheeseburger 1,30\n 104 suco 2,00\n 105 refrigerante 1,00\n ")
+	escreva("para finalizar a compra digite 5\n")
+	escreva("insira o código do produto")
+
+	escreva("digite o codigo do produto (0 a 5): ")
+	leia(ind)
+	enquanto(ind<5){
+	escreva(B[ind])
+	escreva("\ninsira a quantidade do produto")
+	leia(quant)
+	escreva(p)
+	escreva("digite o codigo do produto (0 a 5): ")
+	leia(ind)
+	p=quant*B[ind]
+	total=total+p
+
+	 }
+	 escreva("total da compra: ", total)
+
+	}
+}

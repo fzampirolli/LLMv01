@@ -1,0 +1,16 @@
+programa
+{
+	funcao inicio()
+	{
+		const inteiro n=0
+		inteiro vetor[n]
+		escreva("Digite o tamanho do vetor: ")
+		leia(vetor[n])
+		inteiro i
+		para(i=0; i<n; i++){
+			escreva("Digite um valor para ser armazenado no vetor: ")
+			leia(vetor[i])
+		}
+
+	}
+}

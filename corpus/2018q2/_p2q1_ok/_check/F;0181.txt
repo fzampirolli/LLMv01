@@ -1,0 +1,49 @@
+programa
+{
+
+		inclua biblioteca Util
+		funcao inicio (){
+
+			const inteiro Max=50
+			inteiro V[Max], i, n
+			inteiro cont=0
+			escreva ("preencher vetor:\n")
+			para (i=0; i<Max; i++){
+
+				V[i]=Util.sorteia(-20, 50)
+			}
+
+			para (i=0; i<Max;i++){
+				escreva("\n",V[i])
+
+			}
+			para (i=0; i<Max; i++){     
+
+			}
+			escreva ("\n O elemento 7 é: ", V[7])
+
+			para (i=0; i<Max; i++){
+				se (V[i]<=V[7]){    
+
+					cont=cont+1
+
+				}
+			}
+			escreva ("\n Maiores que o elemento 7", cont)
+			escreva ("\n Digite um numero inteiro")
+			leia (n)
+
+			para (i=0; i<Max; i++){
+				leia (V[i])      
+				se (n!=V[1]){    
+				escreva ("Nao existe esse numero no vetor") 
+				}
+				senao {
+					escreva ("Exite esse numero no vetor")
+
+				}
+
+			}
+
+		}
+	}

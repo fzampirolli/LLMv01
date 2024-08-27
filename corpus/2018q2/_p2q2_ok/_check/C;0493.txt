@@ -1,0 +1,73 @@
+programa
+{
+	funcao inicio() {
+		const inteiro y=40, x=60
+		caracter comando, setor1[x][y], setor2[x][y]
+		inteiro i, j, s, f, c, v
+		i=0
+		j=0
+		v=0
+			para(i=0;i<60;i++){
+				para(j=0;j<40;j++){
+					setor1[i][j]='v'
+					setor2[i][j]='v'
+				}
+			}
+
+		escreva("O que deseja fazer? \n", "A) Vender ingresso \n", "B) Exibir total de ingressos vendidos \n", "C) Encerrar programa \n")
+		leia(comando)
+			se (comando=='a' ou comando=='A'){
+			escreva("Digite o setor que deseja: \n")
+			leia(s)
+				se (s<1 ou s>2){
+					escreva("Escolha entre o setor 1 ou 2: \n")
+					leia(s)	
+			}
+			escreva("Digite a fileira que deseja: \n")
+			leia (f)
+				se (0>f ou f>40){
+					escreva("Escolha uma fileira entre 1 e 40: \n")
+					leia(f)	
+			}
+			escreva("Digite a cadeira que deseja: \n")
+			leia (c)
+				se (0>c ou c>60){
+					escreva("Escolha uma cadeira entre 1 e 60: \n")
+					leia(c)
+				}		
+				se (s==1){
+					setor1[c][f]='p'
+				}
+				senao {
+					setor2[c][f]='p'
+				}
+			escreva("O que deseja fazer? \n", "A) Vender ingresso \n", "B) Exibir total de ingressos vendidos \n", "C) Encerrar programa \n")
+			leia(comando)
+			}
+			senao se (comando=='b' ou comando=='B'){
+				para(i=0;i<60;i++){
+					para(j=0;j<40;j++){
+						se (setor1[i][j]='p'){
+							v=v+1
+						}
+						se (setor2[i][j]='p'){
+							v=v+1
+						}
+					}
+				}
+				escreva("Foram vendidos ", v,"  ingressos. \n")
+				escreva("O que deseja fazer? \n", "A) Vender ingresso \n", "B) Exibir total de ingressos vendidos \n", "C) Encerrar programa \n")
+				leia(comando)
+			}	
+			senao se (comando=='c' ou comando=='C'){
+				C()
+			}
+			senao{
+				escreva("Digite um comando válido. ")
+				leia(comando)	
+			}
+	}
+	funcao C() {
+		limpa()
+	}
+}

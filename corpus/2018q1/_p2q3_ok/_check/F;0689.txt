@@ -1,0 +1,49 @@
+programa
+{
+	funcao inicio()
+	{
+
+	inteiro tam, VetorLido[]
+		escreva("Digite o tamnho do vetor: ")
+		leia(tam)
+		para(inteiro i=0; i<tam; i++)
+		escreva("Digite um valor> ")
+		leia(VetorLido[i])
+
+		funcao matriz (vetor[tam]){
+		funcao retorne
+		funcao media (vetor[tam]){
+
+		}
+	}
+	funcao inteiro matirz(inteiro vetor[tam]){
+		para (inteiro linha = 0; linha<tam; lin++)
+			para (inteiro coluna = 0; coluna<tam; coluna++){
+				escreva("Digite um valor: ")
+				leia(matriz[linha][coluna])
+
+			}
+}
+			para (inteiro linha = 0; linha<tam; lin++){
+				para (inteiro coluna = 0; coluna<tam; coluna++){
+				se (linha == coluna){
+			matriz[linha][coluna] = tam
+			tam = tam - 1
+			}
+		}
+	}
+	retorne escreva(matriz[linha][coluna])
+}
+	{ funcao media (vetor[tam])
+		inteiro somaPar = 0
+		real mediaAritimetica
+			para (inteiro linha = 0; linha<tam; lin++){
+				para (inteiro coluna = 0; coluna<tam; coluna++){
+				se (matriz[linha][coluna])%2==0{
+					somaPar = somaPar + matriz[linha][coluna]
+				}
+			}
+			mediaAritimetica = (somaPar/(tam*tam))
+			retorne escreva(mediaAritimetica)
+			}
+	}

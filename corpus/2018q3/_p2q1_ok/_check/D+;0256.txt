@@ -1,0 +1,25 @@
+
+programa
+{
+	funcao inicio()
+	{
+		inteiro n, i = 0
+		inteiro V[]={}
+
+		escreva("\nEscreva um valor inteiro impar positivo: ")
+		leia(n)
+
+		escreva("Escreva valores para o vetor: ")
+		para(i = 0; i < n; i++)
+		{
+			leia(V[i])
+			i = i + 1
+		}
+
+		se (V[i] < V[n-i]){
+			V[n-1] = V[i]
+			V[i] = V[n-1]
+		}
+
+	}
+}

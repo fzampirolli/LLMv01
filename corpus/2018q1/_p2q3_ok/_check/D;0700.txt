@@ -1,0 +1,62 @@
+programa
+{
+	funcao inteiro matriz (inteiro m[][])
+
+	escreva ("\nDigite o tamanho em x:")
+	leia (tamx)
+	escreva ("\nDigite o tamanho em y:")
+	leia (tamy)
+
+	para (i=0; i<tamy; i++){
+			para (j=0; j<tamx; j++) 
+			escreva ("Digite o valor: \n")
+			leia (val)
+			m[i][j]= val 
+		}
+
+			apo = vetor [i]
+			m[i][i] = apo 
+
+			 retorne m[i][j]
+
+	funcao inteiro mediaimpar (inteiro m[][]){
+
+		 inteiro  impar 
+
+		para (i=0; i<tamy; i++){
+			para (j=0; j<tamx; j++)
+			se (m[i][j] %2 == 1){
+				impar = impar + m[i][j]
+				tam = tam + 1
+				}
+
+			}
+
+			mediaimpar = impar/tam
+
+			 retorne mediaimpar 
+
+	}	
+
+	funcao inicio()
+	{
+		inteiro vetor[100], m[150][150]
+		inteiro tam, i, j, tamx, tamy, apo, valor, val 
+
+		escreva ("Digite o tamanho do vetor: ")
+		leia (tam)
+
+		para (i=0; i<tam; i++){
+		escreva (i, "º:\n" )
+		leia (valor)
+		vetor[i] = valor 
+		}
+
+		matriz (x,y)
+		escreva (m[i][j])
+
+		mediaimpar (a,b)
+		escreva ("A média é: ")
+
+	}
+}

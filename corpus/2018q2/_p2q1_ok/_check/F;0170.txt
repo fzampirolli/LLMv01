@@ -1,0 +1,14 @@
+programa
+{
+	inclua biblioteca Util
+	funcao inicio()	{
+		const inteiro MAX = 50
+		inteiro V[MAX], i
+		escreva ("Preencher vetor: \n")
+		para (i=0; i<MAX; i++) {
+
+			V[i] = Util.sorteia (-20,50)
+		}
+
+	}     
+}

@@ -1,0 +1,38 @@
+programa
+{
+	inclua biblioteca Util
+	funcao inicio()
+	{
+		const inteiro MAX = 50
+		inteiro V[MAX], i, maior
+		maior = 0
+		escreva ("Preencher vetor: \n")
+		para (i=0; i < MAX; i++) {
+			V[i] = Util.sorteia(-20, 50)
+		}
+		para (i=0; i < MAX; i++){
+			escreva (V[i], "\n")
+		}
+		escreva ("O elemento de índice 9 do vetor é ", V[9], "\n")
+		para (i=0; i < MAX; i++){
+			se (V[i] > V[9]){
+				maior = maior + 1
+			}
+		}
+		escreva ("O número de elementos maior que ",V[9], " é ", maior, "\n")
+		inteiro k, m
+		m = 0
+		escreva ("Digite o valor de k")
+		leia (k)
+		para (i=0; i <MAX; i++){
+			se (k == V[i]){
+				escreva ("k ocorreu na posição ",i,"\n")
+			}	senao {
+					m = m +1
+				}
+			}
+		se (m == 50) {
+			escreva ("k não foi encontrado no vetor")
+			}
+		}
+	}

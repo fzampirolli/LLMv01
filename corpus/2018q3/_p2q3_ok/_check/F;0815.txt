@@ -1,0 +1,27 @@
+programa
+{
+	funcao inicio()
+	{
+		escreva("Olá Mundo")
+	}
+	funcao GeraMatriz(inteiro Mat[][], inteiro L, inteiro C){
+		para (inteiro i=0; i<L; i++) {
+			para (inteiro j=0; j<C; j++){
+				Mat[i][j] = Util.sorteia (0,10)
+
+			}
+		}
+	}
+
+	funcao imprimeMatriz (inteiro A[][]) {
+		inteiro i,j, cont=0
+
+	para (i=0; i<i; i++) { 
+	para (j=0; j<j; j++) {
+		escreva(A[i][j])
+		cont+=cont+(A[i][j])
+		}
+	}
+	}
+
+}

@@ -1,0 +1,34 @@
+programa
+{
+	funcao PesquisarDestino (vetorNome[n], vetorDestino[m], nome)
+	{
+		inteiro n=0
+		caracter destino
+		enquanto (n<=25)
+		{
+		escreva ("Digite o seu destino")
+		leia (destino)
+		n++
+		}
+		retorna destino
+	}
+	funcao inicio()
+	{
+		inteiro n=0
+		caracter nome
+		caracter vetorNome[]
+		caracter vetorDestino[]
+		enquanto (n<=25)
+		{
+		escreva ("Digite o seu nome")
+		leia (nome)
+		n++
+		}
+		para (inteiro i=0; i<=n-1; i++)
+		{
+			leia (vetorNome[nome])
+		}
+		escreva ("", PesquisarDestino (vetorNome[n], vetorDestino[m], nome))
+
+	}
+}

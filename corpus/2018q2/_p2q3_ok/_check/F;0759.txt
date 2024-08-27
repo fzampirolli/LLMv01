@@ -1,0 +1,30 @@
+programa
+{
+	inclua biblioteca Util
+	funcao inicio()
+	{
+		caracter M[150][4]
+		GeraMat (A,150, 4)
+
+	}
+
+	funcao GeraMat(caracter Mat[][], inteiro nlinhas, inteiro ncolunas){
+		caracter conceitos[5] = {'A', 'B', 'C', 'D', 'F'}
+		inteiro i, j, valor
+		para (i=0; i<nlinhas; i++){
+			para(j=0; j<ncolunas; j++){
+				valor = Util.sorteia(0, 4)
+				Mat[i][j] = conceitos[valor]
+			}
+		}
+	}	
+
+	funcao caracter ImprimeConceito(caracter vet[]){
+		caracter A = 'A' , B = 'B', C = 'C', D = 'C'
+		se(vet[] == A){
+			escreva(
+		}
+
+		}
+
+}

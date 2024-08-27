@@ -1,0 +1,19 @@
+programa
+{
+	funcao inicio()
+	{
+		inteiro indicelinha=0, indicecoluna=0,matriz [][], i=0,c=0
+
+	escreva ("Digite valor numero de linhas ")
+	leia (i)
+	escreva ("Digite valor numero de colunas ")
+	leia (c)
+	enquanto (indicelinha<i){
+		leia (matriz[indicelinha][indicecoluna])
+		indicelinha=indicelinha+1
+		indicecoluna=indicecoluna+1	
+
+	}
+	escreva (matriz[i][c])
+	}
+}

@@ -1,0 +1,22 @@
+programa
+{
+	funcao inicio()
+	{
+
+		inteiro i=2, j=2
+		inteiro A[][]
+
+		escreva("Matriz:")
+		Ler_Matriz(A)
+
+	}
+	funcao Ler_Matriz (inteiro matriz[][]){
+		inteiro i, j
+
+	para(i=0; i<2; i++){
+		para(j=0; j<2; j++){
+			escreva(matriz[i][j])
+		}
+	}
+	}
+}

@@ -1,0 +1,43 @@
+programa
+{
+	funcao Matriz(vetor[tam]. tam)
+	{
+		inteiro A[][]
+		leia (A[tam][tam])
+		para (inteiro a=0 ; a<=tam-1; a++)
+		{
+			A[tam][tam] = 
+		}
+
+	}
+	funcao Imprimir(matrizes)
+	{
+
+	}
+	funcao Media(matrizes)
+	{
+
+	}
+	funcao inicio()
+	{
+		inteiro tam
+		inteiro a
+		inteiro vetor[]
+		escreva ("digite o tamanho do vetor:")
+		leia (tam)
+		para (inteiro i=0; i<=tam-1; i++)
+		{
+			leia (vetor[tam])
+		}
+		enquanto (tam>=0)
+		{
+			a = tam
+			vetor[tam] = vetor[a-1]
+			tam--
+		}
+		matrizes = Matriz(vetor[tam])
+		Imprimir(matrizes)
+		media = Media(matrizes)
+		escreva ("A media é:", media)
+	}
+}

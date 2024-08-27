@@ -1,0 +1,51 @@
+
+programa
+{
+	funcao inicio(cadeia parametros[])
+	{
+		inteiro qnt, cod, codigo[] = { 300, 301, 302, 303, 304, 305}
+		cadeia item[] = { "Pão de queijo", "Bauru", "Cachorro quente", "Chesseburguer", "Suco", "Refri"}
+		real total=0, preco, precoun[] = { 1.30, 1.40, 1.50, 1.50, 2.20, 1.00 }
+
+		escreva("Cógdigo", "\t\t Item:", "\t\t Preço unitário\n")
+		para (inteiro posicao=0; posicao<6; posicao++){
+		escreva (codigo [posicao], "\t\t", item [posicao], "\t\t", precoun[posicao], "\n")
+		}
+
+		escreva("Digite um código de um produto(300 a 305):")
+		leia(cod)
+		se (cod>0) {
+		escreva("Digite a quantidade do produto:")
+		leia(qnt)	
+				se ((303==cod) ou (cod==302)){
+					preco=1.50
+			}
+				senao se (cod==301){
+					preco=1.40
+				}
+					senao se (cod==300){
+						preco=1.30
+					}
+						senao se (cod==304){
+							preco=2.20
+						}
+							senao se(cod==305){
+								preco=1.00
+							}
+			total = total +(preco*qnt)
+
+			enquanto (cod>0){
+			escreva("Digite um código de um produto(300 a 305):")
+			leia(cod)
+			se (cod>0){
+			escreva("Digite a quantidade do produto:")
+			leia(qnt)
+			}
+			senao {
+			total = total + (preco*qnt)
+			}
+		}
+		}
+			escreva("Total da compra (R$): ", total)
+		}
+}

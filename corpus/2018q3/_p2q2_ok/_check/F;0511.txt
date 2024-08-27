@@ -1,0 +1,39 @@
+programa
+{
+	funcao inicio() 
+	{
+		inteiro n
+		escreva ("Digite um número par de 2 a 22: ")
+		leia (n)
+		se(n%2!=0){
+			escreva("Erro!! Digite um número par de 2 a 22: ")
+			leia(n)
+		}
+
+		const inteiro tam=n
+		inteiro graopreto, graobranco, r=0
+		inteiro A[tam][tam],i,j
+
+		para(i=0;i<tam;i++){
+			para(j=0;j<tam;j++){
+				escreva ("Entre com a posição [",i,"][",j,"] da matriz: ")
+				leia(A[i][j])
+
+			}
+
+		}
+		graopreto = A[0][0]+A[1][1]
+		graobranco = A[0][1]+A[1][0]
+
+		se(graopreto>graobranco){
+			r=0
+			se(graobranco>graopreto){
+				r=1
+			}se(graopreto==graobranco){
+				r=2
+			}
+		}
+		escreva(graopreto, " ",graobranco," ",r )
+
+	}
+}

@@ -1,0 +1,28 @@
+programa
+{
+	funcao inicio()
+	{
+
+	}
+
+		funcao retorna logico comparaVetor (inteiro v[], inteiro k){
+			para (k=0; k<v[n]; k++){
+				se (v[k]>=30){
+				retorna falso
+				}
+			retorna verdadeiro 
+		}
+		inteiro v[125]
+	para(inteiro n=0; n<v; n++){
+		escreva("Digite um valor: ")
+		leia(v[n])
+
+		funcao retorna boolean comparaVetor ( inteiro v[], logico n, inteiro k){
+
+		}
+
+			}
+
+		}
+
+	}

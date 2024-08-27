@@ -1,0 +1,34 @@
+programa
+{
+	funcao inicio(){
+
+	inteiro n, i, j,  A[][], r, somapretas=0, somabrancas=0
+
+	leia(n)
+
+	para (i=0;i<n;i++){
+	para(j=0;j<n;j++){
+	leia(A[i][j])
+	se (i%2==1 e j%2==0){
+	somapretas = A[i][j] + somapretas			
+	}
+	se (i%2==0 e j%2==1){
+	somabrancas = A[i][j] + somabrancas		
+	}
+	}
+	}
+
+	se (somapretas > somabrancas){
+	r=0	
+	}
+	se (somabrancas > somapretas){
+	r=1
+	}
+
+	se (somabrancas == somapretas){
+	r=2	
+	}
+
+	escreva( somapretas, " ", somabrancas, " ", r)		
+	}
+}

@@ -1,0 +1,37 @@
+programa
+{
+	funcao inicio()
+	{
+		const inteiro n=2
+		inteiro matrizA[n][n], graos_casabranca, graos_casapreta, r, i, j
+
+		para(i=0;i<n;i++){
+			para(j=0;j<n;j++){
+				se(i==j){
+				escreva("O numero de graos na casa branca e=", " ")
+				leia(graos_casabranca)
+				}
+				senao{
+				escreva("O numero de graos casa preta e=", " ")
+				leia(graos_casapreta)
+				}
+				leia(matrizA[i][j])
+			}
+
+		}
+		para(i=0;i<n;i++){
+			para(j=0;j<n;j++){
+				se(graos_casabranca>graos_casapreta){
+					r=0
+				}
+				se(graos_casapreta>graos_casabranca){
+					r=1	
+				}
+				se(graos_casabranca==graos_casapreta){
+					r=2
+				}
+			}
+			escreva("A respota e=", graos_casabranca, " ", graos_casapreta, " ", r)
+		}
+	}
+}

@@ -1,0 +1,41 @@
+programa
+{
+	funcao inicio()
+	{
+		inteiro  quat, cod, i, a[6] cadeia b[6] real c[6] ,valor , cont
+		a[0]=100
+		a[1]=101
+		a[2]=102
+		a[3]=103
+		a[4]=104
+		a[5]=105
+		b[0]="pao de queijo"
+		b[1]="bauru"
+		b[2]="cachorro quente"
+		b[3]="cheeseburguer"
+		b[4]="suco "
+		b[5]="refrigerante"
+		c[0]=1.10
+		c[1]=1.30
+		c[2]=1.50
+		c[3]=1.30
+		c[4]=2.00
+		c[5]=1.00
+
+		para(i=0;i<6;i++){
+			escreva("\n", a[i] , b[i] , c[i] )
+		}
+		escreva("\n Entre com o codigo do pedido;")
+		leia(cod)	
+		enquanto(cod<>0){	
+			para(i=0;i<6;i++){			
+				se (cod==a[i]){
+					escreva("\n Entre com a quantidade do pedido;")
+					leia(quat)
+					valor= c[i]*quat
+					cont=valor+ cont						
+				}
+			}
+		}		
+	}
+}

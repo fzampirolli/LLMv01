@@ -1,0 +1,38 @@
+programa
+{
+	logico valor
+
+	funcao inicio()
+	{
+
+		inteiro v [2]
+		inteiro k=30, n = 0
+
+		escreva ("Entrada de dados do vetor")
+		para ( inteiro i=0;i<2;i++){
+			escreva ("Digite o valor ", i+1, ":")
+			leia (v[i])
+		}
+
+		comparaVetor (v, n, k) 
+
+		se (valor = verdadeiro ){
+				escreva ("Existe número menor a 30 nesse vetor")			 
+			}
+
+	}
+
+	funcao logico comparaVetor (inteiro v[], inteiro n, inteiro k){
+
+			para (inteiro i=0; i<2; i++){
+				se (n<k){
+				valor = verdadeiro
+			}
+				senao {
+				valor=falso
+			}
+			}
+			retorne valor
+
+			}
+		}

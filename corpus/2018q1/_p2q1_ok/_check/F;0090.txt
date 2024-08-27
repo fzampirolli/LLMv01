@@ -1,0 +1,21 @@
+programa
+{
+	funcao inicio()
+	{
+		inteiro vetorA[115], numero=0, i=0
+
+	     para (i=0; i <= 115; i++){
+	     escreva ("\nDigite o valor do elemento ", i+1," do vetor informado: ") 
+		leia (vetorA[i])
+	     }
+
+	     para (i=0; i <= 115; i++){	      
+	          se (vetorA[i]==40){
+	              escreva ("\nExiste número igual a 40 nesse vetor.")
+	          }
+	            senao {
+	              escreva ("\nNão existe numero igual a 40 nesse vetor.")
+	            }
+	    }	
+     }
+}

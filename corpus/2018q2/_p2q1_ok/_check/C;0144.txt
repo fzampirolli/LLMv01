@@ -1,0 +1,36 @@
+programa
+{	inclua biblioteca Util
+	funcao inicio()
+	{
+	const inteiro MAX=50
+	inteiro V[MAX], i, k
+	logico achou = falso
+	escreva ("Preencher vetor:\n")
+	para (i=0; i < MAX; i++) {
+		V[i] = Util.sorteia (-20,50)
+	}
+
+	para(i = 0; i < MAX; i++)
+		{
+			escreva (V[i], " \n")
+		}
+
+			escreva ("Número índice 5:\n", V[4])  
+
+	escreva ("\nInsira um número:")
+	leia (k)
+	para (i = 0; i <= MAX; i++) {    
+
+			se (V[i] == k)
+			{
+				escreva (k," Encontrado na posição: ", i, "\n")
+				achou = verdadeiro  pare   
+			}
+		}
+
+		se (nao achou) 
+		{
+			escreva (k, "Não foi encotrado no Vetor\n")
+		}
+	}
+}

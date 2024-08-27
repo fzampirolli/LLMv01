@@ -1,0 +1,108 @@
+
+programa
+{
+	funcao inicio()
+	{
+
+		const inteiro L = 4, C=4
+		inteiro matrizA[L][C]
+
+		para (inteiro linha = 0; linha < L; linha++)
+		{
+			para (inteiro coluna = 0; coluna < C ; coluna++)
+			{
+				escreva("\nEntre com o valor da matriz na célula [", linha,"] [", coluna,"]: ")
+				leia (matrizA[linha][coluna])
+			}
+		}
+
+		const inteiro I= 4, J=4
+		inteiro matrizB[I][J]
+
+		para (inteiro linhaB = 0; linha < I; linhaB++)
+		{
+			para (inteiro colunaB = 0; coluna < J ; colunaB++)
+			{
+			matrizB[linhaB][colunaB] = 0
+			}
+		}
+
+			se (matrizB[0][2] >= matrizB[0][3]){
+				para (inteiro linhaB = 0; linha < 2; linhaB++)
+				{
+					para (inteiro colunaB = 2; coluna < J ; colunaB++)
+					{
+					matrizB[linhaB][colunaB] = matriz[0][2]
+					}
+				}
+				senao {
+					se (matrizB[0][3] >= matrizB[1][2]){
+						para (inteiro linhaB = 0; linha < 2; linhaB++)
+						{
+							para (inteiro colunaB = 2; coluna < J ; colunaB++)
+							{
+							matrizB[linhaB][colunaB] = matriz[0][3]
+							}
+						}
+						senao {
+							se (matrizB[1][2] >= matrizB[1][3]){
+								para (inteiro linhaB = 0; linha < 2; linhaB++)
+								{
+									para (inteiro colunaB = 2; coluna < J ; colunaB++)
+									{
+									matrizB[linhaB][colunaB] = matriz[1][2]
+									}
+								}
+								senao{
+									para (inteiro linhaB = 0; linha < 2; linhaB++)
+									{
+										para (inteiro colunaB = 2; coluna < J ; colunaB++)
+										{
+										matrizB[linhaB][colunaB] = matriz[1][3]
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+	escreva (Matriz A)
+	escreva ("\nL=", L)
+	escreva ("\nC="C)
+
+	para (inteiro linha = 0; linha < 1; linha++)
+		{
+			para (inteiro coluna = 0; coluna < C ; coluna++)
+			{
+				escreva("\n"matrizA[linha][coluna])
+			}
+		}
+
+	para (inteiro linha = 1; linha < 2; linha++)
+		{
+			para (inteiro coluna = 0; coluna < C ; coluna++)
+			{
+				escreva("\n"matrizA[linha][coluna])
+			}
+		}
+
+	para (inteiro linha = 2; linha < 3; linha++)
+		{
+			para (inteiro coluna = 0; coluna < C ; coluna++)
+			{
+				escreva("\n"matrizA[linha][coluna])
+			}
+		}
+
+	para (inteiro linha = 3; linha < 4; linha++)
+		{
+			para (inteiro coluna = 0; coluna < C ; coluna++)
+			{
+				escreva("\n"matrizA[linha][coluna])
+			}
+		}
+
+	}
+}

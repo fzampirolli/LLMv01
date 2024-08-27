@@ -1,0 +1,20 @@
+programa 
+{
+
+	inclua biblioteca Util
+	funcao inicio()
+	{
+		const  inteiro MAX =50
+		inteiro V[MAX], i, n=0, x=0
+
+		 escreva ("Preencha o vetor: \n")
+
+		 para(i=0; i<MAX; i++){
+		 	V[i] = Util.sorteia (-20,50)
+			escreva (" ", V[i])
+		}
+
+  		escreva ("\nO elemento no índice 14 é: ", V[14])		 
+
+		}
+	}

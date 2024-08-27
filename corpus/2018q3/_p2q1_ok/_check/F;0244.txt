@@ -1,0 +1,21 @@
+programa
+{
+	funcao inicio()
+	{
+		const inteiro n=7
+		inteiro vetorV[n], semiparticionado[n], elemento_central, i
+
+		para(i=0;i<n;i++){
+			escreva("Digite um numero inteiro:")
+			leia(vetorV[i])
+
+		}
+		para(i=0;i<n;i++){
+			se (vetorV[i]<vetorV[n-i]){
+			vetorV[i]=vetorV[n-i]
+			leia(semiparticionado[i])
+			escreva("O semiparticionado do vetor V e:", semiparticionado[i])
+			}
+		}
+	}
+}

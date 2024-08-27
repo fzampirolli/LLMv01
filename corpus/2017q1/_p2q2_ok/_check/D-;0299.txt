@@ -1,0 +1,63 @@
+programa
+{
+	funcao inicio()
+	{
+
+		real totalcompra, codigo100, codigo101, codigo102, codigo103, codigo104, codigo105, soma1, soma2, soma3, soma4, soma5, soma6, quant1, quant2, quant3, quant4, quant5, quant6
+		inteiro entrada
+
+		codigo100 = 1.10
+		codigo101 = 1.30
+		codigo102 = 1.50
+		codigo103 = 1.30
+		codigo104 = 2.00
+		codigo105 = 1.00
+
+		escreva ("\nDigite o código do produto. Caso queira finalizar digite 0.\n")
+		leia (entrada)
+			se (entrada == 100){
+				escreva ("\nDigite a quantidade\n")}
+				leia (quant1)
+				soma1 = codigo100*quant1
+
+		escreva ("\nDigite o código do produto. Caso queira finalizar digite 0.\n")
+		leia (entrada)
+			se (entrada == 101){
+				escreva ("\nDigite a quantidade\n")}
+				leia (quant2)
+				soma2 = codigo101*quant2
+
+		escreva ("\nDigite o código do produto. Caso queira finalizar digite 0.\n")
+		leia (entrada)
+			se (entrada == 102){
+				escreva ("\nDigite a quantidade\n")}
+				leia (quant3)
+				soma3 = codigo102*quant3
+
+		escreva ("\nDigite o código do produto. Caso queira finalizar digite 0.\n")
+		leia (entrada)
+			se (entrada == 103){
+				escreva ("\nDigite a quantidade\n")}
+				leia (quant4)
+				soma4 = codigo103*quant4
+
+		escreva ("\nDigite o código do produto. Caso queira finalizar digite 0.\n")
+		leia (entrada)
+			se (entrada == 104){
+				escreva ("\nDigite a quantidade\n")}
+				leia (quant5)
+				soma5 = codigo104*quant5
+
+		escreva ("\nDigite o código do produto. Caso queira finalizar digite 0.\n")
+		leia (entrada)
+			se (entrada == 105){
+				escreva ("\nDigite a quantidade\n")}
+				leia (quant6)
+				soma6 = codigo105*quant6
+
+		enquanto (entrada == 0){
+		totalcompra = soma1+soma2+soma3+soma4+soma5+soma6
+				escreva ("\nO total da compra é\n", totalcompra)}
+			}
+
+	}

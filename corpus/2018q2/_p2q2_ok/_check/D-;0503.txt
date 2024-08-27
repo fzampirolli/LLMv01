@@ -1,0 +1,52 @@
+programa
+{
+	funcao inicio()
+	{
+		inteiro z, l, c, cc, ll
+		caracter v = 'v', u = 'U', r = 'R', ss, p ='p'
+		const inteiro L=10, C=11
+		caracter M[L][C]
+		caracter N[L][C]
+		escreva("\n--------")
+		escreva("\nMENU")
+		escreva("\n--------")
+		escreva("\n")
+		escreva("\nOPÇÃO A: VENDER INGRESSOS")
+		escreva("\nOPÇÃO B: EXIBIR O TOTAL DE INGRESSOS VENDIDOS")
+		escreva("\nOPÇÃO C: ENCERRAR PROGRAMA")
+		escreva("\nDigite:\n1 se desaja a opção A\n2 se deseja a opção B\n3 se deseja a opção C")
+		para(l=0; l<L; l++){
+			para(c=0; c<C; c++){
+					M[L][C]= v			
+			}
+		}
+		escreva("\nSua opção desejada é: ")
+		leia(z)
+		se(z ==1){
+			escreva("\nDigite o setor desejado [U OU R]: ")
+			leia(ss)
+			escreva("\nDigite a fileira desejada [1 à 10]: ")
+			leia(ll)
+			escreva("\nDigite a cadeira desejada [1 à 11]: ")
+			leia(cc)
+			se(ss == u){
+				se(M[ll][cc] == v){
+					M[ll][cc] = p
+					escreva("\nLugar comprado com sucesso!!!")
+				}
+				senao{
+					escreva("\nCadeira não disponível")
+				}				
+			}
+			se(ss == r){
+				se(N[ll][cc] == v){
+					N[ll][cc] = p
+					escreva("\nLugar comprado com sucesso!!!")
+				}
+				senao{
+					escreva("\nCadeira não disponível")
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,24 @@
+programa
+{
+	funcao inicio()
+	{
+         const inteiro x = 15, y = 15
+         inteiro z = 0
+         cadeia nome
+         cadeia vetorNome[x], vetorAcento[x]
+
+         escreva("Entre com o seu nome \n")
+         para(z = 0; z<15; z++) {
+         leia(nome)
+         leia(vetorNome[x])
+
+         pesquisaAcento (vetorAcento[], vetorNome[], nome)
+
+	}
+
+}
+    funcao inteiro pesquisaAcento (inteiro vetorAcento[], inteiro vetorNome[], cadeia nome)
+    {
+
+    }
+}

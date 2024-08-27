@@ -1,0 +1,70 @@
+programa
+{
+	inclua biblioteca Util
+
+	funcao inicio()
+	{
+		const inteiro linha=10, coluna=11
+		inteiro setorum[linha][coluna], setordois[linha][coluna]
+		inteiro fileira, cadeira
+		escreva("Setor um: \n")
+		para (inteiro i = 0; i < 10; i++)
+		{
+			para (inteiro j = 0; j < 11; j++)
+			{
+				setorum[i][j] = 0
+				setordois[i][j] = 0
+
+				escreva("[", setorum[i][j], "]")
+
+			}
+
+			escreva ("\n")
+		}
+		escreva ("Setor dois: \n")
+		para (inteiro i = 0; i < 10; i++)
+		{
+			para (inteiro j = 0; j < 11; j++)
+			{
+				escreva("[", setordois[i][j], "]")
+			}
+
+			escreva ("\n")
+		}
+		inteiro g=0 
+		para(;g<=220;){
+		escreva("\n qual o setor desejado? setor um(0) setor dois(1) sair(-1)")
+		inteiro k
+		leia(k)
+		para(;k>=0;){
+		se(k==0){
+		escreva("\n qual a fileira e cadeira desejada? ")
+		leia(fileira)
+		leia(cadeira)
+			se(setorum[fileira][cadeira]==0){
+			setorum[fileira][cadeira]=1
+			escreva("\n ingresso comprado")
+			g++
+			}
+			senao { escreva("\n esta cadeira ja foi vendida")
+			}
+		}
+		senao {
+		escreva("qual a fileira e cadeira desejada? ")
+		leia(fileira)
+		leia(cadeira)
+			se(setordois[fileira][cadeira]==0){
+			setordois[fileira][cadeira]=1
+			escreva("\n ingresso comprado")
+			g++
+			}
+			senao { escreva("\n esta cadeira ja foi vendida")
+			}
+
+		}
+		}
+
+		escreva("Total de cadeiras vendidas: "+g)
+	}
+	}
+}

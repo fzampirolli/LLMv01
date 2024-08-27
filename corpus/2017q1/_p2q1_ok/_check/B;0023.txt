@@ -1,0 +1,41 @@
+programa
+{
+	funcao inicio()
+	{ inteiro a[6], b[6], c[6], l
+	para(l=0;l<6;l++){
+		escreva("\nDigite um valor para o vetor a: ")
+		leia(a[l])
+	}
+
+	para(l=0;l<6;l++){
+		escreva("\nDigite um valor para o vetor b: ")
+		leia(b[l])
+	}
+		ImprimeVetor (a, 6)
+		ImprimeVetor (b, 6)
+		MaioresElementos (a,b,6)
+
+	}
+	funcao ImprimeVetor ( inteiro &vetor[], inteiro n){
+		inteiro l=0
+		escreva("O vetor é ")
+		para(l=0; l<n; l++)
+		escreva(vetor[l],",")
+		escreva("\n")
+	}
+	funcao MaioresElementos (inteiro &vetor1[], inteiro vetor2[], inteiro n){
+		inteiro vetorC[n], l=0
+		para(l=0; l<n; l++){
+			se(vetor1[l]<vetor2[l]){
+				vetorC[l]=vetor2[l]
+			}
+			senao{
+				vetorC[l]=vetor1[l]
+			}
+			}
+			escreva("O vetor é:")
+			para(l=0; l<n; l++){
+				escreva(vetorC[l], ",")
+			}
+		}
+}

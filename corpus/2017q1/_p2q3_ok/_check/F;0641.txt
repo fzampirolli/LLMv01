@@ -1,0 +1,19 @@
+programa
+{
+	funcao inicio()
+	{
+
+		const inteiro TAMANHO = 4
+		inteiro matriz[4][4]
+		para (inteiro linha = 2; linha >2 ; linha++)
+		{
+	}
+			para (inteiro coluna = 0; coluna < 4 ; coluna++)
+			{
+
+				escreva("[", matriz[linha][coluna], "]") 
+			}
+
+			escreva ("Digite o valor de A \n")
+		}
+}

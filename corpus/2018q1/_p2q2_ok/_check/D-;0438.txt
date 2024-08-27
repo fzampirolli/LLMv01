@@ -1,0 +1,33 @@
+programa
+{
+	funcao inicio()
+	{
+		const inteiro n=45,k=45
+		inteiro i,c
+		cadeia vetorNomes[n],vetorDestino[k],destino
+		para(i=0;i<45;i++){
+			para(c=0;c<45;c++){
+				escreva("Digite o nome do passageiro:")
+				leia(vetorNomes[i])
+				escreva("Digite o destino:")
+				leia(vetorDestino[c])
+			}
+		}
+		escreva("Pesquisar nome de um destino :")
+		leia(destino)
+		pesquisarNome(vetorDestino,vetorNome,destino,c)
+	escreva(pesquisarNome)
+		se (destino==vetorDestino[c]){
+		}
+	}
+	funcao pesquisarNome (real vetorDestino, cadeia vetorNome,cadeia destino,inteiro c){
+		para(c=0;c<45;c++){
+			se(v[c]==destino){
+				retorne v[c]
+
+				}
+			}
+
+			}
+	}
+}

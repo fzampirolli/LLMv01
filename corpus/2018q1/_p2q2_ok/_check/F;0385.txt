@@ -1,0 +1,37 @@
+programa
+{
+	funcao inicio()
+	{
+		cadeia Vetor_nome[45] 
+		cadeia Vetor_destino[45] caracter destino, nome
+		inteiro i=0
+
+		 enquanto (i< 45){
+		 	escreva ("Digite seu nome \n")
+		 	leia(nome)
+		 	i++
+
+		                 }
+		 enquanto (i<45 ){
+		 escreva ("Digite seu destino: \n")
+		 leia (destino)
+		 i++
+		 se (destino == vazio)  {
+             	escreva ("Destino não existe!")
+             }
+	                      }
+}
+funcao cadeia pesquisarNome (cadeia nome[], cadeia destino[]) {
+             inteiro i
+             cadeia Vetor_nome[], Vetor_destino[]
+
+             para (i=0; i<45;i++){
+             	escreva ("Nome:",Vetor_nome[i])
+             }
+             para (i=0; i<45;i++){
+             	escreva ("Destino:", Vetor_destino[i])
+             }
+
+}           
+
+}

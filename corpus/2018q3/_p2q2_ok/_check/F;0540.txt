@@ -1,0 +1,39 @@
+programa
+{
+	funcao inicio()
+	{
+
+		const inteiro n=0, gBranco=0, gPreto=0,
+		inteiro j, i , A[n][n]
+
+		escreva("Digite um número inteiro par de 2 a 22: ")
+		leia(n)
+		para (i=0; i<n; i++){
+			para (j=0; j<n; j++){
+				leia(A[i][j])
+			}
+		}
+
+		para (i=0; i<n; i++){
+			para (j=0; j<n; j++){
+				escreva(A[i][j], "  ")
+			}
+			escreva("\n")
+	}
+
+	se (gBranco == gPreto){
+		escreva("Empate")
+
+	}
+
+	senao se  (gBranco > gPreto){
+		escreva("0")
+
+	} senao {
+		escreva("1")
+
+	}
+	escreva("\n ", gBranco, "  ", gPreto, "  ", r)
+
+	}
+}

@@ -1,0 +1,60 @@
+programa
+{
+	funcao inicio()
+	{
+		cadeia conceitos[valor],Mat[150][4]
+
+		GeraMat
+		GeraMedia
+		Conceitofinal
+
+	}
+
+	funcao GeraMat(caracter Mat[][], inteiro nlinhas,inteiro ncolunas)
+	{
+		caracter conceitos [5] ={'A','B','C','D','F'}
+		inteiro i , j , valor 
+		para (i= 0;i<nlinhas;i++)
+			para(j=0;j<ncolunas;j++){
+				valor= Util.sorteia(0,4)
+				Mat[i][j] = conceitos[valor]
+		}
+	funcao GeraMedia (real Mat[][] ,real nlinhas, real ncolunas) {
+
+		caracter avaliacoes [4]
+		real nlinhas , ncolunas, media
+
+		para (i=0;i<150;i++)
+		para (j=0;j<4;j++) {
+			media =( (Mat[i][0]*0,34)*(Mat[i][1]*0,10)*(Mat[i][2]*0,15)*(Mat[i][3]*0,41)) /100
+
+		}
+		 funcao Conceitofinal ( caracter conceitofinal[] )
+		 para (i=0;i<150;i++)
+		 para (j=0;j<4;j++){
+			valor= Util.sorteia(0,4)
+			Mat[i][j] = conceitofinal[valor]
+
+		}
+
+		 se (media < 0,8) {
+		 	escreva("Conceito F")
+		 }
+		 senao se (media<1,5){
+		 	escreva("Conceito D")
+		 }
+		 senao se (media<2,5){
+		 	escreva("Conceito C")
+		 }
+		 senao se (media<3,6){
+		 	escreva("Conceito B")
+		 }
+		 senao { 
+		 	escreva ("Conceito final igual a A")
+		 }
+
+	}
+
+	}
+
+}

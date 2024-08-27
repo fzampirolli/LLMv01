@@ -1,0 +1,20 @@
+programa
+{
+	inclua biblioteca Util
+	funcao inicio()
+	{
+		const inteiro MAX = 50
+		inteiro V[MAX], i, maior7=0
+		escreva ("Preencher vetor: \n")
+		para (i=0; i < MAX; i++){
+
+			V[i] = Util.sorteia (-20, 50)
+			se (i>7)     
+			{
+				maior7=maior7+1
+			}
+		escreva("Temos ", maior7, " números maiores que 7 ")   
+		}
+	}       
+
+}

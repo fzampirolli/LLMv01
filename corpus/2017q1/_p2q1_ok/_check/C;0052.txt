@@ -1,0 +1,27 @@
+programa
+{
+	funcao inicio()
+	{
+		inteiro a[] = {42, 30, -215, 20, 25, 7}, b[]={12, 103, 49, 20, 55, 7}, c[6]
+
+		escreva (" Vetor A:")
+		para (inteiro i=0; i<6; i++)
+		escreva (" ", a[i])
+
+		escreva ("\n Vetor B:")
+		para (inteiro ii=0; ii<6; ii++){
+		escreva (" ", b[ii])
+		}
+		escreva ("\nVetor C: ")
+		para(inteiro j=0; j<6; j++){
+ 			se (a[j]>=b[j]){
+ 				c[j] = a[j]
+ 			} 
+ 				senao { 
+ 					c[j] = b[j]
+ 				}
+
+		escreva(" ", c[j])
+ 		}
+	}
+}

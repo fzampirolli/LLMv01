@@ -1,0 +1,11 @@
+programa
+{
+	funcao inicio()
+	{
+	inteiro v
+	inteiro mat1[][], mat2[][]
+
+	para(v=0;v>
+
+	}
+}

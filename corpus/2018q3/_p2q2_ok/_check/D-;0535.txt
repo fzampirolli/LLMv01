@@ -1,0 +1,39 @@
+programa
+{
+	funcao inicio()
+	{
+
+		inteiro n, i, j
+
+		leia(n)
+
+		inteiro A[n][n], graos_cb=0, graos_cp=0, r
+
+		para(i=0; i<n; i++){
+			para(j=0;j<n; j++){
+				leia(A[i][j])
+
+				se(i==j){
+					graos_cb= graos_cb + A[i][j]
+				}
+				senao{
+					graos_cp= graos_cp + A[i][j]
+				}
+
+				se(graos_cb>graos_cp){
+					r=0
+				}
+				senao{
+					se(graos_cp>graos_cb){
+						r=1
+					}
+					senao{
+						r=2
+					}
+				}
+		escreva(graos_cb, " ", graos_cp, " ", r)
+
+			}
+		}
+	}
+}

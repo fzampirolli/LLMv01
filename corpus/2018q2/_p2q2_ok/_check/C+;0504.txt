@@ -1,0 +1,74 @@
+programa
+{
+	funcao inicio()
+	{
+		cadeia setorA[10][11], setorB[10][11], opc1, opc2, opc3, opc4, opc5
+		inteiro ind, l=10, c=11, lin, col, cont=0
+
+		escreva ("Setor A\n")
+		para (l=0; l<10; l++) {
+		para (c = 0; c<11; c++){
+			setorA[l][c] = "v"
+		}
+		}
+		escreva ("\nSetor B\n")
+		para (l=0; l<10; l++) {
+		para (c = 0; c<11; c++){
+			setorB[l][c] = "v"
+		}
+}
+		escreva ("\nVender ingresso?")
+		leia (opc1)
+		se (opc1=="sim"){
+			escreva ("\nSetor A? sim ou não: ")
+			leia (opc2)
+			se (opc2=="sim"){
+			escreva ("\nDigite a fileira: ")
+			leia (lin)
+			escreva("\nDigite a cadeira: ")
+			leia (col)
+			se (setorA[lin][col]=="v"){
+				escreva ("Parabens pela venda!")
+				setorA[lin][col]="p"
+			}
+			senao {
+				escreva ("\nA cadeira já foi vendida")
+			}
+			}
+		}
+		senao {
+				escreva ("\nSetor B? sim ou não: ")
+					leia (opc3)
+				se (opc3=="sim"){
+				escreva ("\nDigite a fileira: ")
+				leia (lin)
+				escreva("\nDigite a cadeira: ")
+				leia (col)
+				se (setorB[lin][col]=="v"){
+					escreva ("Parabens pela venda!")
+				setorB[lin][col]="p"
+			}
+				senao {
+				escreva ("\nA cadeira já foi vendida")
+			}	
+			}
+		}
+				escreva ("\nExibir o total de ingressos vendidos?")
+				 leia (opc4)
+				 se (opc4=="sim"){
+				 	para (l=0; l<10; l++) {
+					para (c = 0; c<11; c++){
+						se (setorA[l][c]=="p" ou setorB[l][c]=="p"){
+							cont=cont+1
+						}
+					}
+				 }
+			  escreva ("\nO total de ingresso vendidos foram: ", cont)
+		}
+			escreva ("\nEncerrar programa?")
+			leia (opc5)
+			se (opc5=="sim") {
+				limpa()
+			} 
+	}
+}

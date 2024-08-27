@@ -1,0 +1,27 @@
+programa
+{
+	funcao GeraMat (carater Mat [][], inteiro nlinhas, ncolunas) {
+			caracter conceitos [5] = {'A', 'B', 'C', 'D', 'F'}
+			inteiro i, j, valor
+			para (i=0; i<nlinhas; i++) {
+				para (j=0; j<ncolunas; j++){
+					valor = Util.sorteia (0,4)
+					Mat [i][j] = conceitos [valor]
+		inteiro indlinha, indcoluna
+		real GeraMedia
+		inteiro [150][4]
+		GeraMedia = ((conceito[i][j]*0,32+conceito[i][j]*0,10+conceito[i][j]*0,15+conceito[i][j]*0,43)/100)
+		nlinhas=0 
+		ncolunas=0
+		enquanto (nlinhas < 150)
+		{
+			ncolunas = 0
+			enquanto (ncolunas < 4)
+			{
+				nlinhas = 0 
+			}
+			}
+		}
+	}
+	}
+}
