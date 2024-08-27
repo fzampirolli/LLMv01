@@ -196,6 +196,8 @@ def read_files_from_subfolders(root_folder):
 root_folder = './corpus'
 texts, labels = read_files_from_subfolders(root_folder)
 
+exit(0)
+
 # Exemplo de conjunto de dados
 class CustomDataset(Dataset):
     def __init__(self, texts, labels):
