@@ -1,12 +1,12 @@
 import os, re, shutil
 
-# import torch
-# from torch.utils.data import Dataset
-# from transformers import AutoTokenizer, AutoModelForSequenceClassification, Trainer, TrainingArguments
+import torch
+from torch.utils.data import Dataset
+from transformers import AutoTokenizer, AutoModelForSequenceClassification, Trainer, TrainingArguments
 
-# # Defina seu tokenizer e modelo
-# tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased", clean_up_tokenization_spaces=True)
-# model = AutoModelForSequenceClassification.from_pretrained("bert-base-uncased", num_labels=5)
+# Defina seu tokenizer e modelo
+tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased", clean_up_tokenization_spaces=True)
+model = AutoModelForSequenceClassification.from_pretrained("bert-base-uncased", num_labels=5)
 
 # Função para ler arquivos de texto e Java em subpastas recursivas
 label_mapping = {
@@ -251,7 +251,7 @@ def read_files_from_subfolders(root_folder):
 root_folder = './corpus'
 texts, labels = read_files_from_subfolders(root_folder)
 
-exit(0)
+# exit(0)
 
 # Exemplo de conjunto de dados
 class CustomDataset(Dataset):
