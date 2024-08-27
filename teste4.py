@@ -1,12 +1,12 @@
 import os, re, shutil
 
-# import torch
-# from torch.utils.data import Dataset
-# from transformers import AutoTokenizer, AutoModelForSequenceClassification, Trainer, TrainingArguments
+import torch
+from torch.utils.data import Dataset
+from transformers import AutoTokenizer, AutoModelForSequenceClassification, Trainer, TrainingArguments
 
-# # Defina seu tokenizer e modelo
-# tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased", clean_up_tokenization_spaces=True)
-# model = AutoModelForSequenceClassification.from_pretrained("bert-base-uncased", num_labels=5)
+# Defina seu tokenizer e modelo
+tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased", clean_up_tokenization_spaces=True)
+model = AutoModelForSequenceClassification.from_pretrained("bert-base-uncased", num_labels=5)
 
 # Função para ler arquivos de texto e Java em subpastas recursivas
 label_mapping = {
@@ -218,7 +218,7 @@ def read_files_from_subfolders(root_folder):
                         texts.append(text)
                         labels.append(label)
                         if file.endswith('.java'):
-                            
+
                             ######################### MELHORAR CONVERSOR !!!!
                             text_py = java2py(text)
                             #########################
@@ -236,9 +236,10 @@ def read_files_from_subfolders(root_folder):
                         print("================================================ENTRADA:")
                         #print(label_str, label)
                         print(text)
-                        print("======SAÍDA:")
-                        text = rename_classes(text)
-                        print(text)
+                        if file.endswith('.java'):
+                            print("======SAÍDA:")
+                            text = rename_classes(text)
+                            print(text)
 
                         # new_filename = rename_file(subdir, file, label_str, contador, text)
                         #contador += 1
@@ -249,8 +250,6 @@ def read_files_from_subfolders(root_folder):
 # Exemplo de uso
 root_folder = './corpus'
 texts, labels = read_files_from_subfolders(root_folder)
-
-exit(0)
 
 # Exemplo de conjunto de dados
 class CustomDataset(Dataset):
