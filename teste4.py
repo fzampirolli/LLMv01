@@ -1,16 +1,24 @@
 import os, re, shutil
 
 import torch
-from torch.utils.data import Dataset
+from torch.utils.data import Dataset, DataLoader
 from transformers import AutoTokenizer, AutoModelForSequenceClassification, Trainer, TrainingArguments
+
+# Verifique a disponibilidade da GPU
+if torch.cuda.is_available():
+    print("GPU is available! Utilizing GPU for computations.")
+    device = torch.device("cuda")  # Use GPU for tensors and operations
+else:
+    print("GPU is not available. Defaulting to CPU.")
+    device = torch.device("cpu")  # Use CPU for tensors and operations
 
 # Defina seu tokenizer e modelo
 tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased", clean_up_tokenization_spaces=True)
-model = AutoModelForSequenceClassification.from_pretrained("bert-base-uncased", num_labels=5)
+model = AutoModelForSequenceClassification.from_pretrained("bert-base-uncased", num_labels=5).to(device)
 
 # Função para ler arquivos de texto e Java em subpastas recursivas
 label_mapping = {
-    'F': 0,
+    'F': 0, 'F+': 0,
     'D-': 1, 'D': 1, 'D+': 1,
     'C-': 2, 'C': 2, 'C+': 2,
     'B-': 3, 'B': 3, 'B+': 3,
@@ -195,13 +203,14 @@ def read_files_from_subfolders(root_folder):
                     #     os.rename(os.path.join(subdir, file), os.path.join(subdir, file)[:-3]+'.txt')
                     #     continue
                         
-                    if file.endswith('.java') or file.endswith('.por') or file.endswith('.txt'): 
+                    if file.endswith('.java'):# or file.endswith('.py') or file.endswith('.txt'): 
                         # print(file)
                         label_str = file.split(';')[0]
                         label_str = label_str.split(',')[0]
                         label = label_mapping.get(label_str, -1)  # Use -1 for unknown labels
-                        # if label!=4:
-                        #     continue
+                        if not 0<=label<=4:
+                            print("ERRO: ",label_str)
+                            continue
                         try:
                             with open(os.path.join(subdir, file), 'r', encoding='utf-8') as f:
                                 text = f.read()
@@ -212,34 +221,36 @@ def read_files_from_subfolders(root_folder):
                             except UnicodeDecodeError:
                                 print(f"Skipping file {file} due to decoding error")
                                 continue
-                        text = remove_comments(text)
 
+
+                        #text = remove_comments(text)
 
                         texts.append(text)
                         labels.append(label)
-                        if file.endswith('.java'):
 
-                            ######################### MELHORAR CONVERSOR !!!!
-                            text_py = java2py(text)
-                            #########################
+                        # if file.endswith('.java'):
 
-                            if not "#ERROR Java code:" in text_py:
-                                texts.append(text_py)
-                                labels.append(label) 
-                                # Escrever o novo conteúdo no arquivo renomeado
-                                with open(os.path.join(subdir, file)[:-4]+"py", 'w', encoding='utf-8') as f:
-                                    f.write(text_py)
-                            else:
-                                print("#ERROR Java code:",file)
+                        #     ######################### MELHORAR CONVERSOR !!!!
+                        #     text_py = java2py(text)
+                        #     #########################
+
+                        #     if not "#ERROR Java code:" in text_py:
+                        #         texts.append(text_py)
+                        #         labels.append(label) 
+                        #         # Escrever o novo conteúdo no arquivo renomeado
+                        #         with open(os.path.join(subdir, file)[:-4]+"py", 'w', encoding='utf-8') as f:
+                        #             f.write(text_py)
+                        #     else:
+                        #         print("#ERROR Java code:",file)
 
 
-                        print("================================================ENTRADA:")
-                        #print(label_str, label)
-                        print(text)
-                        if file.endswith('.java'):
-                            print("======SAÍDA:")
-                            text = rename_classes(text)
-                            print(text)
+                        # print("================================================ENTRADA:")
+                        # #print(label_str, label)
+                        # print(text)
+                        # if file.endswith('.java'):
+                        #     print("======SAÍDA:")
+                        #     text = rename_classes(text)
+                        #     print(text)
 
                         # new_filename = rename_file(subdir, file, label_str, contador, text)
                         #contador += 1
@@ -250,8 +261,6 @@ def read_files_from_subfolders(root_folder):
 # Exemplo de uso
 root_folder = './corpus'
 texts, labels = read_files_from_subfolders(root_folder)
-
-# exit(0)
 
 # Exemplo de conjunto de dados
 class CustomDataset(Dataset):
@@ -267,12 +276,12 @@ class CustomDataset(Dataset):
         text = self.texts[idx]
         label = self.labels[idx]
         
-        encoding = self.tokenizer(text, truncation=True, padding='max_length', max_length=128)
+        encoding = self.tokenizer(text, truncation=True, padding='max_length', max_length=512)
         
         return {
-            'input_ids': torch.tensor(encoding['input_ids'], dtype=torch.long),
-            'attention_mask': torch.tensor(encoding['attention_mask'], dtype=torch.long),
-            'labels': torch.tensor(label, dtype=torch.long)
+            'input_ids': torch.tensor(encoding['input_ids'], dtype=torch.long).to(device),
+            'attention_mask': torch.tensor(encoding['attention_mask'], dtype=torch.long).to(device),
+            'labels': torch.tensor(label, dtype=torch.long).to(device)
         }
 
 # Crie o conjunto de dados
@@ -280,9 +289,9 @@ dataset = CustomDataset(texts, labels)
 
 # Defina o data collator
 def data_collator(batch):
-    input_ids = torch.stack([item['input_ids'] for item in batch])
-    attention_mask = torch.stack([item['attention_mask'] for item in batch])
-    labels = torch.stack([item['labels'] for item in batch])
+    input_ids = torch.stack([item['input_ids'] for item in batch]).to(device)
+    attention_mask = torch.stack([item['attention_mask'] for item in batch]).to(device)
+    labels = torch.stack([item['labels'] for item in batch]).to(device)
     
     return {
         'input_ids': input_ids,
@@ -309,6 +318,13 @@ trainer = Trainer(
     data_collator=data_collator,
 )
 
-# 354/354 [1:22:48<00:00, 14.04s/it
+# Desative a pinagem de memória no DataLoader
+trainer.get_train_dataloader = lambda: DataLoader(
+    dataset,
+    batch_size=training_args.per_device_train_batch_size,
+    collate_fn=data_collator,
+    pin_memory=False  # Desative a pinagem de memória
+)
+
 # Inicie o treinamento
 trainer.train()
